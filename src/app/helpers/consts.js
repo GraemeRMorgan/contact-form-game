@@ -11,10 +11,10 @@ export const DIRECTION_UP = "UP";
 export const DIRECTION_DOWN = "DOWN";
 
 export const directionUpdateMap = {
-  [DIRECTION_LEFT] : {x:-1, y:0},
-  [DIRECTION_RIGHT] : {x:1, y:0},
-  [DIRECTION_UP] : {x: 0, y: -1},
-  [DIRECTION_DOWN] : {x:0, y:1}
+  [DIRECTION_LEFT]: { x: -1, y: 0 },
+  [DIRECTION_RIGHT]: { x: 1, y: 0 },
+  [DIRECTION_UP]: { x: 0, y: -1 },
+  [DIRECTION_DOWN]: { x: 0, y: 1 }
 }
 
 export const LEVEL_THEMES = {

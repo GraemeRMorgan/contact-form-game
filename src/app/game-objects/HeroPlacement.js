@@ -18,6 +18,7 @@ export class HeroPlacement extends Placement {
         if (this.movingPixelsRemaining === 0) {
             return;
         }
+        console.log(this.movingPixelsRemaining)
         this.movingPixelsRemaining -= this.travelPixelsPerFrame;
         if (this.movingPixelsRemaining <= 0) {
             this.movingPixelsRemaining = 0;

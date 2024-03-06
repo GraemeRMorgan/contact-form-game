@@ -1,3 +1,5 @@
+
+
 import { DIRECTION_RIGHT, CELL_SIZE, DIRECTION_LEFT, DIRECTION_UP } from "../helpers/consts";
 
 export class Placement {
@@ -19,14 +21,14 @@ export class Placement {
     if(this.movingPixelsRemaining > 0){
       return this.displayMovingXY();
     }
-    const x = this.x * CELL_SIZE + "px";
-    const y = this.y * CELL_SIZE + "px";
+    const x = this.x * CELL_SIZE;
+    const y = this.y * CELL_SIZE;
     return [x, y];
   }
 
   displayMovingXY() {
-    const x = this.x * CELL_SIZE + "px";
-    const y = this.y * CELL_SIZE + "px";
+    const x = this.x * CELL_SIZE;
+    const y = this.y * CELL_SIZE;
     const progressPixels = CELL_SIZE - this.movingPixelsRemaining;
     switch (this.movingPixelDirection) {
       case DIRECTION_LEFT:
