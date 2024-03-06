@@ -4,10 +4,18 @@ import { DIRECTION_RIGHT, directionUpdateMap } from '../helpers/consts';
 
 export class HeroPlacement extends Placement {
 
-    constructor(properties, level){
-        super(properties, level);
+    
+
+    controllerMoveRequested(direction){
+        // Attempt to start moving
+
+        // This if is specific to grid based movement. Otherwise you'll end up off of the map.
+        if(this.movingPixelsRemaining > 0){
+            return;
+        }
+        // Start the move
         this.movingPixelsRemaining = 16;
-        this.movingPixelDirection = DIRECTION_RIGHT
+        this.movingPixelDirection = direction;
     }
 
     tick() {
@@ -18,7 +26,6 @@ export class HeroPlacement extends Placement {
         if (this.movingPixelsRemaining === 0) {
             return;
         }
-        console.log(this.movingPixelsRemaining)
         this.movingPixelsRemaining -= this.travelPixelsPerFrame;
         if (this.movingPixelsRemaining <= 0) {
             this.movingPixelsRemaining = 0;
