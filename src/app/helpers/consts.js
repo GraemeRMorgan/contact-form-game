@@ -4,6 +4,7 @@ export const SPRITE_SHEET_SRC = "/ciabattas-revenge-sprites.png";
 // Character 
 export const PLACEMENT_TYPE_HERO = "HERO";
 export const PLACEMENT_TYPE_GOAL = "GOAL";
+export const PLACEMENT_TYPE_WALL = "WALL";
 
 export const DIRECTION_LEFT = "LEFT";
 export const DIRECTION_RIGHT = "RIGHT";

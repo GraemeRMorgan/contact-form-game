@@ -1,5 +1,4 @@
 // import styles from './LevelPlacementsLayer.module.css';
-import { CELL_SIZE } from "@/app/helpers/consts";
 
 const LevelPlacementsLayer = ({ level }) => {
   return level.placements.map((placement) => {

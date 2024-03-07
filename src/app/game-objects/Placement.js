@@ -1,6 +1,6 @@
 
 
-import { DIRECTION_RIGHT, CELL_SIZE, DIRECTION_LEFT, DIRECTION_UP } from "../helpers/consts";
+import { DIRECTION_RIGHT, CELL_SIZE, DIRECTION_LEFT, DIRECTION_UP, directionUpdateMap } from "../helpers/consts";
 
 export class Placement {
   constructor(properties, level) {
@@ -13,9 +13,15 @@ export class Placement {
     this.travelPixelsPerFrame = 1.5;
     this.movingPixelsRemaining = 0;
     this.movingPixelDirection = DIRECTION_RIGHT;
+    this.spriteFacingDirection = DIRECTION_RIGHT;
+    this.spriteWalkFrame = 0;
   }
 
   tick() { }
+
+  isSolidForBody(_body){
+    return false;
+  }
 
   displayXY() {
     if(this.movingPixelsRemaining > 0){
