@@ -1,6 +1,6 @@
 import { Placement } from './Placement';
 import Hero from '../components/object-graphics/Hero';
-import { DIRECTION_LEFT, DIRECTION_RIGHT, directionUpdateMap, BODY_SKINS, HERO_RUN_1, HERO_RUN_2 } from '../helpers/consts';
+import { DIRECTION_LEFT, DIRECTION_RIGHT, directionUpdateMap, BODY_SKINS, HERO_RUN_1, HERO_RUN_2, Z_INDEX_LAYER_SIZE } from '../helpers/consts';
 import { TILES } from '../helpers/tiles';
 import { Collision } from '../classes/Collision';
 const heroSkinMap = {
@@ -110,6 +110,10 @@ export class HeroPlacement extends Placement {
 
         // Peak of movement
         return -2;
+    }
+
+    zIndex(){
+        return this.y * Z_INDEX_LAYER_SIZE;
     }
 
     renderComponent() {

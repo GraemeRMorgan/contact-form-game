@@ -9,6 +9,7 @@ const LevelPlacementsLayer = ({ level }) => {
     const style = {
       position: "absolute",
       transform: `translate3d(${x}px, ${y}px, 0)`,
+      zIndex: placement.zIndex(),
     };
 
     return (
