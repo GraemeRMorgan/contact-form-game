@@ -21,4 +21,19 @@ export class Collision {
         p.isSolidForBody(this.forBody)
       );
     }
+
+    withPlacementAddsToInventory() {
+      return this.placementsAtPosition.find((p) => {
+        return (
+          !p.hasBeenCollected && p.addsItemToInventoryOnCollide(this.forBody)
+        );
+      });
+    }
+
+    withCompletesLevel() {
+      return this.placementsAtPosition.find((p) => {
+        return p.completesLevelOnCollide();
+      });
+    }
+
   }

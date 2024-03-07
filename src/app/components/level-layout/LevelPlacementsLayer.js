@@ -1,7 +1,9 @@
 // import styles from './LevelPlacementsLayer.module.css';
 
 const LevelPlacementsLayer = ({ level }) => {
-  return level.placements.map((placement) => {
+  return level.placements.filter(placement => {
+    return !placement.hasBeenCollected;
+  }).map((placement) => {
     // Wrap each Sprite in a positioned div
     const [x,y] = placement.displayXY();
     // const x = placement.x * CELL_SIZE + "px";

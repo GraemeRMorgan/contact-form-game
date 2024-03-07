@@ -15,11 +15,21 @@ export class Placement {
     this.movingPixelDirection = DIRECTION_RIGHT;
     this.spriteFacingDirection = DIRECTION_RIGHT;
     this.spriteWalkFrame = 0;
+
+    this.hasBeenCollected = false;
   }
 
   tick() { }
 
   isSolidForBody(_body){
+    return false;
+  }
+
+  addsItemToInventoryOnCollide() {
+    return null;
+  }
+
+  completesLevelOnCollide() {
     return false;
   }
 
@@ -48,9 +58,13 @@ export class Placement {
     }
   }
 
+  collect() {
+    this.hasBeenCollected = true;
+  }
+
   zIndex(){
 
-    
+
     return 1;
   
   }

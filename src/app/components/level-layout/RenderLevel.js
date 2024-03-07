@@ -4,6 +4,8 @@ import LevelBackgroundTilesLayer from "./LevelBackgroundTilesLayer";
 import LevelPlacementsLayer from "./LevelPlacementsLayer";
 import { useEffect, useState } from "react";
 import { LevelState } from "@/app/classes/LevelState";
+import FlourCount from "../hud/FlourCount";
+import LevelCompleteMessage from "../hud/LevelCompleteMessage";
 
 const RenderLevel = () => {
   const [level, setLevel] = useState(null);
@@ -38,6 +40,8 @@ const RenderLevel = () => {
         <LevelPlacementsLayer level={level} />
 
       </div>
+      <FlourCount level={level}/>
+      {level.isCompleted && <LevelCompleteMessage />}
     </div>
   );
 };

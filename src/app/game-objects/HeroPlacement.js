@@ -1,6 +1,6 @@
 import { Placement } from './Placement';
 import Hero from '../components/object-graphics/Hero';
-import { DIRECTION_LEFT, DIRECTION_RIGHT, directionUpdateMap, BODY_SKINS, HERO_RUN_1, HERO_RUN_2, Z_INDEX_LAYER_SIZE } from '../helpers/consts';
+import { DIRECTION_LEFT, DIRECTION_RIGHT, directionUpdateMap, BODY_SKINS, HERO_RUN_1, HERO_RUN_2, Z_INDEX_LAYER_SIZE, PLACEMENT_TYPE_CELEBRATION } from '../helpers/consts';
 import { TILES } from '../helpers/tiles';
 import { Collision } from '../classes/Collision';
 const heroSkinMap = {
@@ -33,7 +33,7 @@ export class HeroPlacement extends Placement {
     }
 
     canMoveToNextDestination(direction) {
-        // Is the next space in bournds?
+        // Is the next space in bounds?
         const { x, y } = directionUpdateMap[direction];
         const nextX = this.x + x;
         const nextY = this.y + y;
@@ -77,13 +77,35 @@ export class HeroPlacement extends Placement {
             this.movingPixelsRemaining = 0;
             this.onDoneMoving();
         }
+        this.handleCollisions();
     }
 
     onDoneMoving() {
         const { x, y } = directionUpdateMap[this.movingPixelDirection];
         this.x += x;
         this.y += y;
+        this.handleCollisions();
     }
+
+    handleCollisions() {
+        // handle collisions!
+        const collision = new Collision(this, this.level);
+        const collideThatAddsToInventory = collision.withPlacementAddsToInventory();
+        if (collideThatAddsToInventory) {
+            collideThatAddsToInventory.collect();
+            this.level.addPlacement({
+                type: PLACEMENT_TYPE_CELEBRATION,
+                x: this.x,
+                y: this.y,
+            })
+        }
+        const completesLevel = collision.withCompletesLevel();
+        if (completesLevel) {
+            this.level.completeLevel();
+        }
+    }
+
+
 
     getFrame() {
         // Which frame to use in the walk cycle
@@ -112,8 +134,8 @@ export class HeroPlacement extends Placement {
         return -2;
     }
 
-    zIndex(){
-        return this.y * Z_INDEX_LAYER_SIZE;
+    zIndex() {
+        return this.y * Z_INDEX_LAYER_SIZE + 1;
     }
 
     renderComponent() {
