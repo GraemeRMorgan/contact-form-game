@@ -6,12 +6,15 @@ import { useEffect, useState } from "react";
 import { LevelState } from "@/app/classes/LevelState";
 import FlourCount from "../hud/FlourCount";
 import LevelCompleteMessage from "../hud/LevelCompleteMessage";
+import { useRecoilValue } from "recoil";
+import { currentLevelIdAtom } from "@/app/atoms/currentLevelIdAtom";
 
 const RenderLevel = () => {
   const [level, setLevel] = useState(null);
+  const currentLevelId = useRecoilValue(currentLevelIdAtom);
   useEffect(() => {
     // Create and subscribe to state changes
-    const levelState = new LevelState("1-1", newState => {
+    const levelState = new LevelState(currentLevelId, newState => {
       setLevel(newState)
     })
 
@@ -23,7 +26,7 @@ const RenderLevel = () => {
       levelState.destroy( );
     }
 
-  }, [])
+  }, [currentLevelId])
 
   if(!level){
     return null;
