@@ -17,7 +17,16 @@ const heroSkinMap = {
   [HERO_RUN_2]: [TILES.HERO_RUN_2_LEFT, TILES.HERO_RUN_2_RIGHT],
 };
 
+
+
+
 export class HeroPlacement extends BodyPlacement {
+  constructor(properties, level) {
+    super(properties, level);
+    this.canCollectItems = true;
+    this.allowsAutoMovement = true;
+    this.interactsWithGround = true;
+  }
   controllerMoveRequested(direction) {
     //Attempt to start moving
     if (this.movingPixelsRemaining > 0) {

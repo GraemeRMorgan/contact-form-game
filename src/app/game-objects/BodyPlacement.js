@@ -93,6 +93,10 @@ import { Placement } from "./Placement";
          y: this.y,
        });
      }
+
+     if (collision.withDoorSwitch()) {
+      this.level.switchAllDoors();
+    }
  
      const takesDamages = collision.withSelfGetsDamaged();
      if (takesDamages) {

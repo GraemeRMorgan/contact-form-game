@@ -85,6 +85,15 @@ export class LevelState {
       y >= this.tilesHeight + 1
     )
   }
+
+  switchAllDoors() {
+    this.placements.forEach((placement) => {
+      if (placement.toggleIsRaised) {
+        placement.toggleIsRaised();
+      }
+    });
+  }
+  
   setDeathOutcome(causeOfDeath) {
     this.deathOutcome = causeOfDeath;
     this.gameLoop.stop();

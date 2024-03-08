@@ -54,4 +54,19 @@ export class Collision {
       });
     }
 
+    withPlacementMovesBody() {
+      if (this.forBody.interactsWithGround) {
+        return this.placementsAtPosition.find((p) => {
+          return p.autoMovesBodyOnCollide();
+        });
+      }
+      return null;
+    }
+
+    withDoorSwitch() {
+      return this.placementsAtPosition.find((p) => {
+        return p.switchesDoorsOnCollide(this.forBody);
+      });
+    }
+
   }

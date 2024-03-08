@@ -27,6 +27,8 @@ import { WaterPlacement } from "../game-objects/WaterPlacement";
 import { WaterPickupPlacement } from "../game-objects/WaterPickupPlacement";
 import { GroundEnemyPlacement } from "../game-objects/GroundEnemyPlacement";
 import { FlyingEnemyPlacement } from "../game-objects/FlyingEnemyPlacement";
+import { SwitchableDoorPlacement } from "../game-objects/SwitchableDoorPlacement";
+ import { DoorSwitchPlacement } from "../game-objects/DoorSwitchPlacement";
 
 
 
@@ -43,6 +45,8 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_WATER_PICKUP]: WaterPickupPlacement,
     [PLACEMENT_TYPE_GROUND_ENEMY]: GroundEnemyPlacement,
     [PLACEMENT_TYPE_FLYING_ENEMY]: FlyingEnemyPlacement,
+    [PLACEMENT_TYPE_SWITCH_DOOR]: SwitchableDoorPlacement,
+    [PLACEMENT_TYPE_SWITCH]: DoorSwitchPlacement,
 
 
 };
