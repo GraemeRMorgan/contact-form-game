@@ -1,6 +1,10 @@
 
 // import styles from './FlourCount.module.css';
 import { PLACEMENT_TYPE_FLOUR } from "@/app/helpers/consts";
+import styles from "./FlourCount.module.css";
+import Sprite from "../object-graphics/Sprite";
+import { TILES } from "../../helpers/tiles";
+import PixelNumber from "../object-graphics/PixelNumber";
 
 const FlourCount = ({ level }) => {
 
@@ -9,12 +13,10 @@ const FlourCount = ({ level }) => {
     }).length;
 
     return (
-        <p style={{
-            position: "absolute",
-            left: 0,
-            top: 0,
-            color: "white",
-        }}>Flour Remaining: {count}</p>
+        <div className={styles.flourCount}>
+        <Sprite frameCoord={TILES.FLOUR} />
+        <PixelNumber number={count} />
+      </div>
     );
 }
 

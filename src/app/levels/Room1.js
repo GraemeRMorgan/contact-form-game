@@ -16,7 +16,7 @@ import {
 
 const level = {
   theme: LEVEL_THEMES.GREEN,
-  tilesWidth: 8,
+  tilesWidth: 9,
   tilesHeight: 8,
   placements: [
     { x: 2, y: 2, type: PLACEMENT_TYPE_HERO },

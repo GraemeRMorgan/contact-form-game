@@ -1,4 +1,4 @@
-import DemoLevel1 from "./DemoLevel1";
+import DemoLevel1 from "./Room1";
 import DemoLevel2 from "./DemoLevel2";
 
 const Levels = {

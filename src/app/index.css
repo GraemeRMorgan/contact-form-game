@@ -19,6 +19,7 @@ body {
       --game-viewport-height: 180px;
       --game-cell-size: 16px;
       --pixel-size: 1;
+      --ui-popup-z-index: 500;
   }
   
   html, body {
@@ -72,3 +73,22 @@ body {
           --pixel-size: 7;
       }
   }
+
+  @media(min-width: 540px) {
+    :root {
+        --pixel-size: 3;
+    }
+}
+ /*4x*/
+@media(min-width: 720px) {
+    :root {
+        --pixel-size: 4;
+    }
+}
+/* 5x */
+@media(min-width: 900px) {
+    :root {
+        --pixel-size: 5;
+    }
+}
+
