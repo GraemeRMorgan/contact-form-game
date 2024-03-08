@@ -18,13 +18,14 @@ export class LevelState {
 
   start() {
     this.isCompleted = false;
+    this.deathOutcome = null;
     const levelData = LevelsMap[this.id];
- 
-     this.theme = levelData.theme;
-     this.tilesWidth = levelData.tilesWidth;
-     this.tilesHeight = levelData.tilesHeight;
-     this.placements = levelData.placements.map((config) => {
-        return placementFactory.createPlacement(config, this);
+
+    this.theme = levelData.theme;
+    this.tilesWidth = levelData.tilesWidth;
+    this.tilesHeight = levelData.tilesHeight;
+    this.placements = levelData.placements.map((config) => {
+      return placementFactory.createPlacement(config, this);
     })
 
     // Create a new inventory
@@ -36,7 +37,7 @@ export class LevelState {
     this.startGameLoop();
   }
 
-  startGameLoop(){
+  startGameLoop() {
     this.gameLoop?.stop();
     this.gameLoop = new GameLoop(() => {
       this.tick();
@@ -53,9 +54,9 @@ export class LevelState {
     });
   }
 
-  tick(){
+  tick() {
     // Check for movement.
-    if(this.directionControls.direction){
+    if (this.directionControls.direction) {
       this.heroRef.controllerMoveRequested(this.directionControls.direction)
     }
 
@@ -68,13 +69,17 @@ export class LevelState {
   }
 
   // Makes sure I can't exit the map.
-  isPositionOutOfBounds(x,y){
-    return(
+  isPositionOutOfBounds(x, y) {
+    return (
       x === 0 ||
       y === 0 ||
       x >= this.tilesWidth + 1 ||
-      y >= this.tilesHeight + 1 
+      y >= this.tilesHeight + 1
     )
+  }
+  setDeathOutcome(causeOfDeath) {
+    this.deathOutcome = causeOfDeath;
+    this.gameLoop.stop();
   }
 
   completeLevel() {
@@ -88,6 +93,7 @@ export class LevelState {
       tilesWidth: this.tilesWidth,
       tilesHeight: this.tilesHeight,
       placements: this.placements,
+      deathOutcome: this.deathOutcome,
       isCompleted: this.isCompleted,
     };
   }

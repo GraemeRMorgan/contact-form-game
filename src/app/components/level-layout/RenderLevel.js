@@ -8,6 +8,8 @@ import FlourCount from "../hud/FlourCount";
 import LevelCompleteMessage from "../hud/LevelCompleteMessage";
 import { useRecoilValue } from "recoil";
 import { currentLevelIdAtom } from "@/app/atoms/currentLevelIdAtom";
+import DeathMessage from "../hud/DeathMessage";
+
 
 const RenderLevel = () => {
   const [level, setLevel] = useState(null);
@@ -45,6 +47,8 @@ const RenderLevel = () => {
       </div>
       <FlourCount level={level}/>
       {level.isCompleted && <LevelCompleteMessage />}
+      {level.deathOutcome && <DeathMessage level={level} />}
+
     </div>
   );
 };

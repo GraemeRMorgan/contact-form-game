@@ -1,6 +1,8 @@
 
 
-import { DIRECTION_RIGHT, CELL_SIZE, DIRECTION_LEFT, DIRECTION_UP, directionUpdateMap } from "../helpers/consts";
+import {
+  DIRECTION_RIGHT, CELL_SIZE, DIRECTION_LEFT, DIRECTION_UP, BODY_SKINS,
+} from "../helpers/consts";
 
 export class Placement {
   constructor(properties, level) {
@@ -10,6 +12,7 @@ export class Placement {
     this.y = properties.y;
     this.level = level;
 
+    this.skin = BODY_SKINS.NORMAL;
     this.travelPixelsPerFrame = 1.5;
     this.movingPixelsRemaining = 0;
     this.movingPixelDirection = DIRECTION_RIGHT;
@@ -21,11 +24,18 @@ export class Placement {
 
   tick() { }
 
-  isSolidForBody(_body){
+  isSolidForBody(_body) {
     return false;
   }
 
   addsItemToInventoryOnCollide() {
+    return null;
+  }
+  damagesBodyOnCollide(_body) {
+    return null;
+  }
+
+  changesHeroSkinOnCollide() {
     return null;
   }
 
@@ -34,7 +44,7 @@ export class Placement {
   }
 
   displayXY() {
-    if(this.movingPixelsRemaining > 0){
+    if (this.movingPixelsRemaining > 0) {
       return this.displayMovingXY();
     }
     const x = this.x * CELL_SIZE;
@@ -52,7 +62,7 @@ export class Placement {
       case DIRECTION_RIGHT:
         return [x + progressPixels, y];
       case DIRECTION_UP:
-        return [ x, y - progressPixels];
+        return [x, y - progressPixels];
       default:
         return [x, y + progressPixels];
     }
@@ -63,16 +73,16 @@ export class Placement {
     this.level.inventory.add(this.addsItemToInventoryOnCollide());
 
   }
-  
+
   canBeUnlocked() {
     return false;
   }
 
-  zIndex(){
+  zIndex() {
 
 
     return 1;
-  
+
   }
 
   renderComponent() {
