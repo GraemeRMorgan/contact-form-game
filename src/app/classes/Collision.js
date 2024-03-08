@@ -36,4 +36,10 @@ export class Collision {
       });
     }
 
+    withLock() {
+      return this.placementsAtPosition.find((p) => {
+        return p.canBeUnlocked();
+      });
+    }
+
   }
