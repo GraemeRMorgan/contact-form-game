@@ -1,16 +1,18 @@
 
-const { 
-    PLACEMENT_TYPE_HERO, 
-    PLACEMENT_TYPE_GOAL, 
-    PLACEMENT_TYPE_WALL, 
-    PLACEMENT_TYPE_FLOUR, 
-    PLACEMENT_TYPE_CELEBRATION, 
-    PLACEMENT_TYPE_KEY, 
-    PLACEMENT_TYPE_LOCK, 
+const {
+    PLACEMENT_TYPE_HERO,
+    PLACEMENT_TYPE_GOAL,
+    PLACEMENT_TYPE_WALL,
+    PLACEMENT_TYPE_FLOUR,
+    PLACEMENT_TYPE_CELEBRATION,
+    PLACEMENT_TYPE_KEY,
+    PLACEMENT_TYPE_LOCK,
     PLACEMENT_TYPE_WATER,
-    PLACEMENT_TYPE_SWITCH, 
-    PLACEMENT_TYPE_SWITCH_DOOR, 
+    PLACEMENT_TYPE_SWITCH,
+    PLACEMENT_TYPE_SWITCH_DOOR,
     PLACEMENT_TYPE_WATER_PICKUP,
+    PLACEMENT_TYPE_GROUND_ENEMY,
+    PLACEMENT_TYPE_FLYING_ENEMY,
 
 
 } = require("../helpers/consts");
@@ -23,6 +25,8 @@ import { LockPlacement } from "../game-objects/LockPlacement";
 import { KeyPlacement } from "../game-objects/KeyPlacement";
 import { WaterPlacement } from "../game-objects/WaterPlacement";
 import { WaterPickupPlacement } from "../game-objects/WaterPickupPlacement";
+import { GroundEnemyPlacement } from "../game-objects/GroundEnemyPlacement";
+import { FlyingEnemyPlacement } from "../game-objects/FlyingEnemyPlacement";
 
 
 
@@ -37,6 +41,8 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_KEY]: KeyPlacement,
     [PLACEMENT_TYPE_WATER]: WaterPlacement,
     [PLACEMENT_TYPE_WATER_PICKUP]: WaterPickupPlacement,
+    [PLACEMENT_TYPE_GROUND_ENEMY]: GroundEnemyPlacement,
+    [PLACEMENT_TYPE_FLYING_ENEMY]: FlyingEnemyPlacement,
 
 
 };
