@@ -126,6 +126,7 @@ export class LevelState {
       isCompleted: this.isCompleted,
       cameraTransformX: this.camera.transformX,
       cameraTransformY: this.camera.transformY,
+      inventory: this.inventory,
       restart: () => {
         this.start();
       },
