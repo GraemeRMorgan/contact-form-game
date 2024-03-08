@@ -4,10 +4,7 @@ const LevelPlacementsLayer = ({ level }) => {
   return level.placements.filter(placement => {
     return !placement.hasBeenCollected;
   }).map((placement) => {
-    // Wrap each Sprite in a positioned div
     const [x,y] = placement.displayXY();
-    // const x = placement.x * CELL_SIZE + "px";
-    // const y = placement.y * CELL_SIZE + "px";
     const style = {
       position: "absolute",
       transform: `translate3d(${x}px, ${y}px, 0)`,

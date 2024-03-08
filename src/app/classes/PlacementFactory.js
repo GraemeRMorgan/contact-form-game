@@ -13,6 +13,8 @@ const {
     PLACEMENT_TYPE_WATER_PICKUP,
     PLACEMENT_TYPE_GROUND_ENEMY,
     PLACEMENT_TYPE_FLYING_ENEMY,
+    PLACEMENT_TYPE_LEFT,
+    PLACEMENT_TYPE_RIGHT
 
 
 } = require("../helpers/consts");
@@ -28,7 +30,7 @@ import { WaterPickupPlacement } from "../game-objects/WaterPickupPlacement";
 import { GroundEnemyPlacement } from "../game-objects/GroundEnemyPlacement";
 import { FlyingEnemyPlacement } from "../game-objects/FlyingEnemyPlacement";
 import { SwitchableDoorPlacement } from "../game-objects/SwitchableDoorPlacement";
- import { DoorSwitchPlacement } from "../game-objects/DoorSwitchPlacement";
+import { DoorSwitchPlacement } from "../game-objects/DoorSwitchPlacement";
 
 
 
@@ -47,6 +49,9 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_FLYING_ENEMY]: FlyingEnemyPlacement,
     [PLACEMENT_TYPE_SWITCH_DOOR]: SwitchableDoorPlacement,
     [PLACEMENT_TYPE_SWITCH]: DoorSwitchPlacement,
+    [PLACEMENT_TYPE_LEFT] : GoalPlacement,
+    [PLACEMENT_TYPE_RIGHT] : GoalPlacement,
+
 
 
 };

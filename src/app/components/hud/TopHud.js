@@ -7,7 +7,7 @@ export default function TopHud({ level }) {
   return (
     <div className={styles.topHud}>
       <div className={styles.topHudLeft}>
-        <FlourCount level={level} />
+        {/* <FlourCount level={level} /> */}
         <InventoryList level={level} />
 
       </div>

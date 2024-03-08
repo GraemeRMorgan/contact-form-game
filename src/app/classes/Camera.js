@@ -6,8 +6,8 @@ import {
   DIRECTION_DOWN,
 } from "../helpers/consts";
 
-const CAMERA_SPEED = 0.01;
-const CAMERA_LOOKAHEAD = 0;
+const CAMERA_SPEED = 0.05;
+const CAMERA_LOOKAHEAD = 0.1;
 const USE_SMOOTH_CAMERA = true;
 
 export class Camera {

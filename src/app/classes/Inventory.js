@@ -14,6 +14,5 @@ export class Inventory {
         return;
       }
       this.inventoryMap.set(key, true);
-      console.log(this.inventoryMap);
     }
   }

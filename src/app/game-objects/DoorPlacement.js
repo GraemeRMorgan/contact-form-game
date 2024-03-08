@@ -1,0 +1,4 @@
+
+class DoorPlacement extends Placement {
+    
+}

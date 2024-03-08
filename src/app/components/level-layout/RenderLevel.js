@@ -43,18 +43,18 @@ const RenderLevel = () => {
       background: THEME_BACKGROUNDS[level.theme]
     }}>
       <div className={styles.gameScreen}>
-      <LevelBackgroundTilesLayer level={level} />
-         <LevelPlacementsLayer level={level} />
-        {/* <div
+        {/* <LevelBackgroundTilesLayer level={level} />
+         <LevelPlacementsLayer level={level} /> */}
+        <div
           style={{
             transform: cameraTranslate,
           }}
         >
           <LevelBackgroundTilesLayer level={level} />
           <LevelPlacementsLayer level={level} />
-        </div> */}
+        </div>
         {level.isCompleted && <LevelCompleteMessage />}
-         {level.deathOutcome && <DeathMessage level={level} />}
+        {level.deathOutcome && <DeathMessage level={level} />}
       </div>
       {/* <FlourCount level={level} /> */}
       <TopHud level={level} />
