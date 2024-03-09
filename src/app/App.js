@@ -23,9 +23,9 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={() => setStart(!start)}>Would you like to start the game?</button>
-      {start ? <RenderLevel /> : null}
-       {/* <RenderLevel /> */}
+      {/* <button onClick={() => setStart(!start)}>Contact Details</button>
+      {start ? <RenderLevel /> : null} */}
+       <RenderLevel />
     </div>
   );
 }
