@@ -13,6 +13,7 @@ import TopHud from "../hud/TopHud";
 import GameStart from "../ui/GameStart";
 import GameFinished from "../ui/GameFinished";
 import GameRestart from "../ui/GameRestart";
+import Menu from "../ui/Menu";
 
 const RenderLevel = () => {
   const [level, setLevel] = useState(null);
@@ -40,9 +41,10 @@ const RenderLevel = () => {
 
   return (
     <>
+      <Menu />
       <GameStart level={level} />
       {/* This is where the Death Popup is called. */}
-      {level.isCompleted && <GameFinished level={level}/>}
+      {level.isCompleted && <GameFinished level={level} />}
       {/* {level.deathOutcome && <DeathMessage level={level} />} */}
       {level.deathOutcome && <GameRestart level={level} />}
       <div

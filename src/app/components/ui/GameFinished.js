@@ -69,10 +69,11 @@ const GameFinished = ({ level }) => {
           boxShadow: "10px 10px 0 black",
         }}
         onClick={() => {
-          handleButtonClick();
-          setIsVisible(false);
-          soundsManager.playSfx(SFX.THEME);
-          level.restart();
+          // handleButtonClick();
+          // setIsVisible(false);
+          // soundsManager.playSfx(SFX.THEME);
+          // level.restart();
+          window.history.back();
         }}
       >
         Go Back?

@@ -1,20 +1,18 @@
-
 import { Placement } from "./Placement";
-import { LOCK_KEY_COLORS } from "../helpers/consts";
-import { TILES } from "../helpers/tiles";
 import Sprite from "../components/object-graphics/Sprite";
+import { TILES } from "../helpers/tiles";
+import { LOCK_KEY_COLORS } from "../helpers/consts";
 import soundsManager, { SFX } from "../classes/Sounds";
 
 
-export class LockPlacement extends Placement {
+export class TreasureChest extends Placement {
   constructor(properties, level) {
     super(properties, level);
     this.color = properties.color ?? LOCK_KEY_COLORS.BLUE;
     this.collectInFrames = 0;
   }
-
   isSolidForBody(_body) {
-    return true;
+    return false;
   }
 
   tick() {
@@ -27,6 +25,7 @@ export class LockPlacement extends Placement {
       }
     }
   }
+
 
   canBeUnlocked() {
     const requiredKey = `KEY_${this.color}`;
@@ -41,15 +40,10 @@ export class LockPlacement extends Placement {
   }
 
   renderComponent() {
-    let size = 16;
-    let frameCoord =
-      this.color === LOCK_KEY_COLORS.BLUE ? TILES.BLUE_LOCK : TILES.GREEN_LOCK;
+    let wallTileCoord = TILES.TREASURE;
     if (this.collectInFrames > 0) {
-      frameCoord = TILES.UNLOCKED_LOCK;
+      wallTileCoord = TILES.UNLOCKED_LOCK;
     }
-    // if(frameCoord === TILES.GREEN_LOCK){
-    //   size = 48;
-    // }
-    return <Sprite frameCoord={frameCoord} size={size} />;
+    return <Sprite frameCoord={wallTileCoord} size={48} />;
   }
 }

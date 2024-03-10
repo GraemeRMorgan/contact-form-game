@@ -58,6 +58,11 @@ import { Howl } from "howler";
     // Stop current sound
     howl.stop();
    }
+
+   mute(key){
+    const howl = this.howls[key];
+    howl.onMute();
+   }
  }
  
  const soundsManager = new Sounds();

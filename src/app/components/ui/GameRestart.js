@@ -4,19 +4,24 @@ import { motion } from "framer-motion";
 import soundsManager, { SFX } from "../../classes/Sounds";
 
 const GameRestart = ({ level }) => {
-    const [isVisible, setIsVisible] = useState(true);
-    const handleHoverStart = () => {
-      soundsManager.playSfx(SFX.HOVER);
-    };
-    const handleButtonClick = () => {
-      soundsManager.playSfx(SFX.CLICK);
-    };
-  
-    return (
+  const [isVisible, setIsVisible] = useState(true);
+  const handleHoverStart = () => {
+    soundsManager.playSfx(SFX.HOVER);
+  };
+  const handleButtonClick = () => {
+    soundsManager.playSfx(SFX.CLICK);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <div className={isVisible ? styles.wrapper : styles.hide}>
         <h1>You are Dead</h1>
         <p>
-          Where are your water wings?
+          You can&apos;t open your eyes under water... You need to use goggles.
         </p>
         <motion.button
           layout
@@ -29,7 +34,7 @@ const GameRestart = ({ level }) => {
           whileHover={{
             boxShadow: "8px 8px 0 black",
             background: "hsla(101, 66%, 55%, 1)",
-            transition: { duration: 0.1 }
+            transition: { duration: 0.1 },
           }}
           onHoverStart={handleHoverStart}
           exit={{
@@ -39,16 +44,14 @@ const GameRestart = ({ level }) => {
           onClick={() => {
             handleButtonClick();
             setIsVisible(false);
-            soundsManager.playSfx(SFX.THEME);
             level.restart();
           }}
         >
           Try Again
         </motion.button>
-
-        
       </div>
+    </motion.div>
   );
-}
+};
 
 export default GameRestart;

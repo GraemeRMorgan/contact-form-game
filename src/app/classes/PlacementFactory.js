@@ -14,7 +14,9 @@ const {
     PLACEMENT_TYPE_GROUND_ENEMY,
     PLACEMENT_TYPE_FLYING_ENEMY,
     PLACEMENT_TYPE_LEFT,
-    PLACEMENT_TYPE_RIGHT
+    PLACEMENT_TYPE_RIGHT,
+    PLACEMENT_TYPE_CARPET,
+    PLACEMENT_TYPE_TREASURE
 
 
 } = require("../helpers/consts");
@@ -31,6 +33,8 @@ import { GroundEnemyPlacement } from "../game-objects/GroundEnemyPlacement";
 import { FlyingEnemyPlacement } from "../game-objects/FlyingEnemyPlacement";
 import { SwitchableDoorPlacement } from "../game-objects/SwitchableDoorPlacement";
 import { DoorSwitchPlacement } from "../game-objects/DoorSwitchPlacement";
+import { CarpetPlacement } from "../game-objects/CarpetPlacement";
+import { TreasureChest } from "../game-objects/TreasueChest";
 
 
 
@@ -51,6 +55,8 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_SWITCH]: DoorSwitchPlacement,
     [PLACEMENT_TYPE_LEFT] : GoalPlacement,
     [PLACEMENT_TYPE_RIGHT] : GoalPlacement,
+    [PLACEMENT_TYPE_CARPET] : CarpetPlacement,
+    [PLACEMENT_TYPE_TREASURE] : TreasureChest,
 
 
 
