@@ -1,21 +1,11 @@
 import styles from "./InventoryList.module.css";
 import {
-  PLACEMENT_TYPE_FIRE_PICKUP,
-  PLACEMENT_TYPE_ICE_PICKUP,
   PLACEMENT_TYPE_WATER_PICKUP,
 } from "../../helpers/consts";
 import { TILES } from "../../helpers/tiles";
 import Sprite from "../object-graphics/Sprite";
 
 const showInventory = [
-  {
-    key: PLACEMENT_TYPE_FIRE_PICKUP,
-    tile: TILES.FIRE_PICKUP,
-  },
-  {
-    key: PLACEMENT_TYPE_ICE_PICKUP,
-    tile: TILES.ICE_PICKUP,
-  },
   {
     key: PLACEMENT_TYPE_WATER_PICKUP,
     tile: TILES.WATER_PICKUP,
