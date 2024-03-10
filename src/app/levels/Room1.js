@@ -22,7 +22,7 @@ const level = {
   tilesHeight: 12,
   placements: [
     { x: 10, y: 6, type: PLACEMENT_TYPE_HERO },
-    { x: 10, y: 3, type: PLACEMENT_TYPE_GOAL },
+    { x: 10, y: 2, type: PLACEMENT_TYPE_GOAL },
 
     // Chest
     {x: 10, y:2, type: PLACEMENT_TYPE_LOCK, color: "GREEN"},
