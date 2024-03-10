@@ -16,15 +16,7 @@ const GameRestart = ({ level }) => {
       <div className={isVisible ? styles.wrapper : styles.hide}>
         <h1>You are Dead</h1>
         <p>
-          This is one of those games where the player will die if they touch the water. I&apos;m sure 
-          there&apos;s something around here that will help you cross?
-        </p>
-        <p>
-          Navigate with the{" "}
-          <span className={styles.specialKeys}>directional arrows</span>,{" "}
-          <span className={styles.specialKeys}>wasd</span>, or{" "}
-          <span className={styles.specialKeys}>touch</span> controls on a mobile
-          device.
+          Where are your water wings?
         </p>
         <motion.button
           layout
