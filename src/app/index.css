@@ -40,7 +40,7 @@ body {
   /* Scale up game art if we can fit it. 2x */
   @media(min-width: 360px) {
       :root {
-          --pixel-size: 2;
+          --pixel-size: 3;
       }
   }
   /* 3x */

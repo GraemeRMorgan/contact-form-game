@@ -8,6 +8,8 @@ import { Placement } from "./Placement";
    Z_INDEX_LAYER_SIZE,
  } from "../helpers/consts";
  import { Collision } from "../classes/Collision";
+ import soundsManager, { SFX } from "../classes/Sounds";
+
  
  export class BodyPlacement extends Placement {
    getCollisionAtNextPosition(direction) {
@@ -18,6 +20,7 @@ import { Placement } from "./Placement";
        x: nextX,
        y: nextY,
      });
+
    }
  
    getLockAtNextPosition(direction) {
@@ -71,6 +74,8 @@ import { Placement } from "./Placement";
      const { x, y } = directionUpdateMap[this.movingPixelDirection];
      this.x += x;
      this.y += y;
+     soundsManager.playSfx(SFX.STEP1);
+
      this.handleCollisions();
    }
  
@@ -92,20 +97,25 @@ import { Placement } from "./Placement";
          x: this.x,
          y: this.y,
        });
+       soundsManager.playSfx(SFX.COLLECT);
      }
 
      if (collision.withDoorSwitch()) {
       this.level.switchAllDoors();
+      soundsManager.playSfx(SFX.OPEN_DOOR);
+
     }
  
      const takesDamages = collision.withSelfGetsDamaged();
      if (takesDamages) {
        this.level.setDeathOutcome(takesDamages.type);
+       soundsManager.playSfx(SFX.WATER_DEATH);
      }
  
      const completesLevel = collision.withCompletesLevel();
      if (completesLevel) {
        this.level.completeLevel();
+       soundsManager.playSfx(SFX.WIN);
      }
    }
  

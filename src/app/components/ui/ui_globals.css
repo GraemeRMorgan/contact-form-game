@@ -1,0 +1,24 @@
+:root {
+    --primary-background-color: "hsla(231, 36%, 47%, 1)";
+    --primary-border-color: "hsla(210, 3%, 58%, 1)";
+
+}
+
+html {
+    color: var(--color-text);
+    font-family: var(--font-family), sans-serif;
+    letter-spacing: -0.03125em;
+    /* This comes from JC */
+    background: var(--color-backdrop-highlight);
+    /* --header-height: 4rem; */
+    /* This is the main font variation - site wide*/
+    font-variation-settings:
+      "MONO" 0,
+      "CASL" 0.53,
+      "wght" 370,
+      "wdth" 125,
+      "slnt" 0,
+      "CRSV" 0.5;
+    -webkit-tap-hightlight: transparent;
+  }
+  

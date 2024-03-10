@@ -7,6 +7,7 @@ import LevelsMap from "../levels/LevelsMap";
 import { Inventory } from "./Inventory";
 import { LevelAnimatedFrames } from "./LevelAnimatedFrames";
 import { Camera } from "./Camera";
+import soundsManager, { SFX } from "../classes/Sounds";
 
 
 
@@ -31,6 +32,7 @@ export class LevelState {
     this.placements = levelData.placements.map((config) => {
       return placementFactory.createPlacement(config, this);
     })
+    
 
     // Create a new inventory
     this.inventory = new Inventory();
@@ -44,6 +46,8 @@ export class LevelState {
     // Create a camera
     this.camera = new Camera(this);
 
+    // Play the theme at the start..
+    // soundsManager.playSfx(SFX.THEME);
 
     this.startGameLoop();
   }
@@ -55,6 +59,7 @@ export class LevelState {
     this.gameLoop?.stop();
     this.gameLoop = new GameLoop(() => {
       this.tick();
+
     })
   }
 
@@ -128,7 +133,10 @@ export class LevelState {
       cameraTransformY: this.camera.transformY,
       inventory: this.inventory,
       restart: () => {
+
         this.start();
+        // Play the theme song...
+        soundsManager.playSfx(SFX.THEME);
       },
     };
   }
