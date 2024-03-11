@@ -73,7 +73,7 @@ const GameFinished = ({ level }) => {
           // setIsVisible(false);
           // soundsManager.playSfx(SFX.THEME);
           // level.restart();
-          window.history.back();
+          window.close();
         }}
       >
         Go Back?
