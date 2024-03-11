@@ -69,10 +69,6 @@ const GameFinished = ({ level }) => {
           boxShadow: "10px 10px 0 black",
         }}
         onClick={() => {
-          // handleButtonClick();
-          // setIsVisible(false);
-          // soundsManager.playSfx(SFX.THEME);
-          // level.restart();
           window.close();
         }}
       >
@@ -85,12 +81,3 @@ const GameFinished = ({ level }) => {
 export default GameFinished;
 
 
-// Here's the code to go back to the previous window. 
-
-// const goBack = () => {
-//     window.history.back();
-//   };
-
-//   return (
-//     <button onClick={goBack}>Go Back</button>
-//   );
