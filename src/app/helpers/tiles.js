@@ -52,6 +52,16 @@ export const TILES = {
   WATER_BUBBLES1: "0x5",
   WATER_BUBBLES2: "2x5",
 
+  // Walls
+  WALL_TOP : "3x0",
+  WALL_VERTICAL : "2x0",
+  WALL_HORIZONTAL: "1x0",
+  WALL_LEFT_CORNER: "0x0",
+  WALL_RIGHT_CORNER: "0x1",
+  WALL_END: "1x1",
+  WALL_END_TOP: "5x0",
+
+
 
 
   //Goal

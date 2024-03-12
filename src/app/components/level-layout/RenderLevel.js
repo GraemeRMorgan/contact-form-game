@@ -42,7 +42,7 @@ const RenderLevel = () => {
   return (
     <>
       <Menu />
-      <GameStart level={level} />
+      {/* <GameStart level={level} /> */}
       {/* This is where the Death Popup is called. */}
       {level.isCompleted && <GameFinished level={level} />}
       {/* {level.deathOutcome && <DeathMessage level={level} />} */}
