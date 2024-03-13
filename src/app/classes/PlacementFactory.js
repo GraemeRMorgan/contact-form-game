@@ -16,7 +16,11 @@ const {
     PLACEMENT_TYPE_LEFT,
     PLACEMENT_TYPE_RIGHT,
     PLACEMENT_TYPE_CARPET,
-    PLACEMENT_TYPE_TREASURE
+    PLACEMENT_TYPE_TREASURE,
+    PLACEMENT_TYPE_SETDRESSING,
+    PLACEMENT_TYPE_COLLIDER,
+    PLACEMENT_TYPE_FLOOR,
+
 
 
 } = require("../helpers/consts");
@@ -35,6 +39,9 @@ import { SwitchableDoorPlacement } from "../game-objects/SwitchableDoorPlacement
 import { DoorSwitchPlacement } from "../game-objects/DoorSwitchPlacement";
 import { CarpetPlacement } from "../game-objects/CarpetPlacement";
 import { TreasureChest } from "../game-objects/TreasueChest";
+import { SetDressing } from "../game-objects/SetDressing";
+import { ColliderPlacement } from "../game-objects/ColliderPlacement";
+import { FloorTilesPlacement } from "../game-objects/FloorTilesPlacement";
 
 
 
@@ -57,6 +64,10 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_RIGHT] : GoalPlacement,
     [PLACEMENT_TYPE_CARPET] : CarpetPlacement,
     [PLACEMENT_TYPE_TREASURE] : TreasureChest,
+    [PLACEMENT_TYPE_SETDRESSING] : SetDressing,
+    [PLACEMENT_TYPE_COLLIDER] : ColliderPlacement,
+    [PLACEMENT_TYPE_FLOOR] : FloorTilesPlacement,
+
 
 
 

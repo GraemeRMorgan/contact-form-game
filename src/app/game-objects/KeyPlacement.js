@@ -14,8 +14,34 @@ import { Placement } from "./Placement";
    }
  
    renderComponent() {
-     const frameCoord =
-       this.color === LOCK_KEY_COLORS.BLUE ? TILES.BLUE_KEY : TILES.GREEN_KEY;
-     return <ElevatedSprite frameCoord={frameCoord} />;
+
+       let keyColorCoord = this.color;
+
+       switch(keyColorCoord){
+        case LOCK_KEY_COLORS.BLUE:
+          keyColorCoord = TILES.BLUE_KEY;
+          break;
+        case LOCK_KEY_COLORS.GREEN:
+          keyColorCoord = TILES.GREEN_KEY;
+          break;
+        case LOCK_KEY_COLORS.ORANGE:
+          keyColorCoord = TILES.ORANGE_KEY;
+          break;
+        case LOCK_KEY_COLORS.PINK:
+          keyColorCoord = TILES.PINK_KEY;
+          break;
+        case LOCK_KEY_COLORS.TREASURE:
+          keyColorCoord = TILES.TREASURE_KEY;
+          break;
+        case LOCK_KEY_COLORS.WHITE:
+          keyColorCoord = TILES.TREASURE_KEY;
+          break;
+        default:
+          keyColorCoord = TILES.GREEN_KEY;
+          break;
+       }
+
+
+     return <ElevatedSprite frameCoord={keyColorCoord} />;
    }
  }

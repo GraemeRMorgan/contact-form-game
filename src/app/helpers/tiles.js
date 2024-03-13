@@ -18,19 +18,20 @@ export const TILES = {
   SETTINGS: "13x3",
 
   // Locks and Keys
-  BLUE_LOCK: "0x4",
+  UNLOCKED_LOCK: "1x2",
+  BLUE_LOCK: "10x1",
   BLUE_KEY: "1x4",
-  TREASURE_LOCK : "12x4",
-  GREEN_LOCK: "13x5",
-  GREEN_KEY: "15x4",
-  UNLOCKED_LOCK: "4x4",
-  MAIN_CHEST: "12x4",
+  TREASURE_LOCK : "8x4",
+  TREASURE_KEY: "6x4",
+  GREEN_LOCK: "2x4",
+  GREEN_KEY: "3x4",
+  PINK_LOCK: "11x1",
+  PINK_KEY: "5x4",
+  ORANGE_LOCK: "9x2", 
+  ORANGE_KEY: "4x4",
+  WHITE_LOCK: "0x16",
+  WHITE_KEY: "4x3",
 
-  // Carpet
-  CARPET: "16x4",
-
-  // Treasure
-  TREASURE: "12x4",
 
   // Water
   WATER1: "0x5",
@@ -60,8 +61,50 @@ export const TILES = {
   WALL_RIGHT_CORNER: "0x1",
   WALL_END: "1x1",
   WALL_END_TOP: "5x0",
+  WALL_EXTENSION: "0x2",
+  WALL_INT_VERT: "6x0",
+  WALL_INT_HOR: "7x1",
+  WALL_INT_BL: "6x2",
+  WALL_INT_BR: "6x1",
+  WALL_INT_VERT_B_END: "7x0",
+  WALL_INT_VERT_T_END: "8x0",
+  WALL_INT_HOR_END_L: "8x1",
+  WALL_INT_HOR_END_R: "9x1",
 
+  WALL_BLUE_DOOR_LEFT: "9x0",
+  WALL_BLUE_DOOR_RIGHT: "10x0",
+  WALL_ORANGE_DOOR_LEFT: "7x2",
+  WALL_ORANGE_DOOR_RIGHT: "8x2",
+  WALL_PINK_DOOR_LEFT: "11x0",
+  WALL_PINK_DOOR_RIGHT: "12x0",
 
+  // Set Dressing
+  WALL_CHART_LARGE: "18x0",
+  WALL_CHART_SMALL1: "19x0",
+  WALL_CHART_SMALL2: "20x0",
+  BOOK_SHELF : "21x0",
+  TABLE_HOR: "11x10", 
+  TABLE_VERT: "16x12",
+  TV: "14x12",
+  COUCH: "10x6",
+  BED: "12x6",
+  BACTA_TANK_BLUE_TL: "20x2",
+  BACTA_TANK_BLUE: "18x4",
+  BACTA_TANK_PINK_TR: "20x8",
+  BACTA_TANK_GREEN_TL: "21x10",
+  TIGHE_BED: "19x13",
+
+  // Collider 
+  COLLIDER: "1x2",
+
+  // Floor Types
+  FLOOR_WARNING1: "13x0",
+  FLOOR_WARNING2: "14x0",
+  FLOOR_WARNING3: "15x0",
+  FLOOR_DARK: "10x2",
+  FLOOR_CLEAN: "12x2",
+  FLOOR_DIRTY: "13x2",
+  FLOOR_RED: "11x2",
 
 
   //Goal

@@ -16,11 +16,13 @@ const LevelBackgroundTilesLayer = ({ level }) => {
         if (y === 0) {
             return tiles.TOP;
         }
+        
         if (y === heightWithWalls) {
             return tiles.BOTTOM;
         }
 
         return tiles.FLOOR;
+        // return null;
     }
 
     let canvases = [];

@@ -42,14 +42,33 @@ export class LockPlacement extends Placement {
 
   renderComponent() {
     let size = 16;
-    let frameCoord =
-      this.color === LOCK_KEY_COLORS.BLUE ? TILES.BLUE_LOCK : TILES.GREEN_LOCK;
-    if (this.collectInFrames > 0) {
-      frameCoord = TILES.UNLOCKED_LOCK;
+
+    let lockColorCoord = this.color;
+
+    switch(lockColorCoord){
+      case LOCK_KEY_COLORS.BLUE:
+        lockColorCoord = TILES.BLUE_LOCK;
+        break;
+      case LOCK_KEY_COLORS.GREEN:
+        lockColorCoord = TILES.GREEN_LOCK;
+        break;
+      case LOCK_KEY_COLORS.PINK:
+        lockColorCoord = TILES.PINK_LOCK;
+        break;
+      case LOCK_KEY_COLORS.ORANGE:
+        lockColorCoord = TILES.ORANGE_LOCK;
+        break;
+      case LOCK_KEY_COLORS.TREASURE:
+        lockColorCoord = TILES.TREASURE_LOCK;
+        break;
+      case LOCK_KEY_COLORS.WHITE:
+        lockColorCoord = TILES.WHITE_LOCK;
+        break;
+      default:
+        lockColorCoord = TILES.GREEN_LOCK;
+        break;
     }
-    // if(frameCoord === TILES.GREEN_LOCK){
-    //   size = 48;
-    // }
-    return <Sprite frameCoord={frameCoord} size={size} />;
+    
+    return <Sprite frameCoord={lockColorCoord} size={size} />;
   }
 }
