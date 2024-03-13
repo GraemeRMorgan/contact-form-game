@@ -29,8 +29,17 @@ export const TILES = {
   PINK_KEY: "5x4",
   ORANGE_LOCK: "9x2", 
   ORANGE_KEY: "4x4",
-  WHITE_LOCK: "0x16",
+  WHITE_LOCK: "16x0",
   WHITE_KEY: "4x3",
+  CHEETOS_LOCK:"1x2",
+  CHEETOS_KEY: "3x3",
+  LASER_LOCK_WALL: "16x1",
+  LASER_LOCK_ON: "18x1",
+
+  // Lasers
+  LASER_WALL_ON: "16x1",
+  LASER_WALL_OFF: "17x1",
+  LASER_ON: "18x1",
 
 
   // Water
@@ -62,6 +71,7 @@ export const TILES = {
   WALL_END: "1x1",
   WALL_END_TOP: "5x0",
   WALL_EXTENSION: "0x2",
+
   WALL_INT_VERT: "6x0",
   WALL_INT_HOR: "7x1",
   WALL_INT_BL: "6x2",
@@ -70,6 +80,8 @@ export const TILES = {
   WALL_INT_VERT_T_END: "8x0",
   WALL_INT_HOR_END_L: "8x1",
   WALL_INT_HOR_END_R: "9x1",
+  WALL_INT_JUNCTION_TOP: "13x4",
+  WALL_CELL_DOORS: "11x3",
 
   WALL_BLUE_DOOR_LEFT: "9x0",
   WALL_BLUE_DOOR_RIGHT: "10x0",
@@ -93,6 +105,7 @@ export const TILES = {
   BACTA_TANK_PINK_TR: "20x8",
   BACTA_TANK_GREEN_TL: "21x10",
   TIGHE_BED: "19x13",
+  AJ: "4x11",
 
   // Collider 
   COLLIDER: "1x2",
@@ -105,6 +118,9 @@ export const TILES = {
   FLOOR_CLEAN: "12x2",
   FLOOR_DIRTY: "13x2",
   FLOOR_RED: "11x2",
+  FLOOR_WARNING_VERT1: "22x4",
+  FLOOR_WARNING_VERT2: "22x5",
+  FLOOR_WARNING_VERT3: "22x6",
 
 
   //Goal

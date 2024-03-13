@@ -3,7 +3,6 @@ import Sprite from "../components/object-graphics/Sprite";
 import { WALL_TYPES } from "../helpers/consts";
 import { TILES } from "../helpers/tiles";
 
-
 export class WallPlacement extends Placement {
   constructor(properties, level) {
     super(properties, level);
@@ -79,6 +78,12 @@ export class WallPlacement extends Placement {
         break;
       case WALL_TYPES.WALL_PINK_DOOR_RIGHT:
         wallTileCoord = TILES.WALL_PINK_DOOR_RIGHT;
+        break;
+      case WALL_TYPES.WALL_INT_JUNCTION_TOP:
+        wallTileCoord = TILES.WALL_INT_JUNCTION_TOP;
+        break;
+      case WALL_TYPES.WALL_CELL_DOORS:
+        wallTileCoord = TILES.WALL_CELL_DOORS;
         break;
       default:
         wallTileCoord = TILES.WALL_VERTICAL;

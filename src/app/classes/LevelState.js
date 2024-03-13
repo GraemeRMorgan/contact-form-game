@@ -29,6 +29,7 @@ export class LevelState {
     this.theme = levelData.theme;
     this.tilesWidth = levelData.tilesWidth;
     this.tilesHeight = levelData.tilesHeight;
+    this.laserValue = true;
     this.placements = levelData.placements.map((config) => {
       return placementFactory.createPlacement(config, this);
     })
@@ -109,6 +110,13 @@ export class LevelState {
         placement.toggleIsRaised();
       }
     });
+  }
+
+  setLaserValue(value){
+    this.laserValue = value;
+  }
+  getLaserValue(){
+    return this.laserValue;
   }
 
   setDeathOutcome(causeOfDeath) {

@@ -18,6 +18,10 @@ const showInventory = [
     key: "KEY_GREEN",
     tile: TILES.GREEN_KEY,
   },
+  // {
+  //   key: "KEY_WHITE",
+  //   title: TILES.WHITE_KEY,
+  // },
 ];
 
 export default function InventoryList({ level }) {

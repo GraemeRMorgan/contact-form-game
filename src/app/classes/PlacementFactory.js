@@ -20,6 +20,7 @@ const {
     PLACEMENT_TYPE_SETDRESSING,
     PLACEMENT_TYPE_COLLIDER,
     PLACEMENT_TYPE_FLOOR,
+    PLACEMENT_TYPE_LASERS,
 
 
 
@@ -42,6 +43,7 @@ import { TreasureChest } from "../game-objects/TreasueChest";
 import { SetDressing } from "../game-objects/SetDressing";
 import { ColliderPlacement } from "../game-objects/ColliderPlacement";
 import { FloorTilesPlacement } from "../game-objects/FloorTilesPlacement";
+import { LaserPlacement } from "../game-objects/LaserPlacement";
 
 
 
@@ -67,6 +69,7 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_SETDRESSING] : SetDressing,
     [PLACEMENT_TYPE_COLLIDER] : ColliderPlacement,
     [PLACEMENT_TYPE_FLOOR] : FloorTilesPlacement,
+    [PLACEMENT_TYPE_LASERS] : LaserPlacement,
 
 
 

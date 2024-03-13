@@ -20,25 +20,33 @@ export class FloorTilesPlacement extends Placement {
       case FLOOR_TYPES.FLOOR_DARK:
         floorCoord = TILES.FLOOR_DARK;
         break;
-    case FLOOR_TYPES.FLOOR_DIRTY:
+      case FLOOR_TYPES.FLOOR_DIRTY:
         floorCoord = TILES.FLOOR_DIRTY;
         break;
-    case FLOOR_TYPES.FLOOR_RED:
+      case FLOOR_TYPES.FLOOR_RED:
         floorCoord = TILES.FLOOR_RED;
         break;
-    case FLOOR_TYPES.FLOOR_WARNING1:
+      case FLOOR_TYPES.FLOOR_WARNING1:
         floorCoord = TILES.FLOOR_WARNING1;
         break;
-    case FLOOR_TYPES.FLOOR_WARNING2:
+      case FLOOR_TYPES.FLOOR_WARNING2:
         floorCoord = TILES.FLOOR_WARNING2;
         break;
-    case FLOOR_TYPES.FLOOR_WARNING3:
+      case FLOOR_TYPES.FLOOR_WARNING3:
         floorCoord = TILES.FLOOR_WARNING3;
         break;
-    default:
+      case FLOOR_TYPES.FLOOR_WARNING_VERT1:
+        floorCoord = TILES.FLOOR_WARNING_VERT1;
+        break;
+      case FLOOR_TYPES.FLOOR_WARNING_VERT2:
+        floorCoord = TILES.FLOOR_WARNING_VERT2;
+        break;
+      case FLOOR_TYPES.FLOOR_WARNING_VERT3:
+        floorCoord = TILES.FLOOR_WARNING_VERT3;
+        break;
+      default:
         floorCoord = TILES.FLOOR_WARNING1;
         break;
-
     }
 
     return <Sprite frameCoord={floorCoord} />;

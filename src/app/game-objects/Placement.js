@@ -20,12 +20,24 @@ export class Placement {
     this.spriteWalkFrame = 0;
 
     this.hasBeenCollected = false;
+    this.laserValue = true;
   }
 
   tick() { }
 
   tickAttemptAiMove() {
     return null;
+  }
+
+  setLaserValue(value){
+    this.laserValue = value;
+  }
+  getLaserValue(){
+    return this.laserValue;
+  }
+
+  consoleDeactivated(){
+    return this.consoleDeactivated;
   }
 
   isSolidForBody(_body) {

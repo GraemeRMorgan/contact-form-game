@@ -1,10 +1,8 @@
-
 import { Placement } from "./Placement";
 import { LOCK_KEY_COLORS } from "../helpers/consts";
 import { TILES } from "../helpers/tiles";
 import Sprite from "../components/object-graphics/Sprite";
 import soundsManager, { SFX } from "../classes/Sounds";
-
 
 export class LockPlacement extends Placement {
   constructor(properties, level) {
@@ -22,8 +20,11 @@ export class LockPlacement extends Placement {
       this.collectInFrames -= 1;
       if (this.collectInFrames === 0) {
         this.level.deletePlacement(this);
+        if(LOCK_KEY_COLORS.WHITE){
+          // Disable the laser...
+          this.level.setLaserValue(false);
+        }
         soundsManager.playSfx(SFX.OPEN_CHEST);
-
       }
     }
   }
@@ -45,7 +46,7 @@ export class LockPlacement extends Placement {
 
     let lockColorCoord = this.color;
 
-    switch(lockColorCoord){
+    switch (lockColorCoord) {
       case LOCK_KEY_COLORS.BLUE:
         lockColorCoord = TILES.BLUE_LOCK;
         break;
@@ -64,11 +65,14 @@ export class LockPlacement extends Placement {
       case LOCK_KEY_COLORS.WHITE:
         lockColorCoord = TILES.WHITE_LOCK;
         break;
+      case LOCK_KEY_COLORS.CHEETOS:
+        lockColorCoord = TILES.CHEETOS_LOCK;
+        break;
       default:
         lockColorCoord = TILES.GREEN_LOCK;
         break;
     }
-    
+
     return <Sprite frameCoord={lockColorCoord} size={size} />;
   }
 }
