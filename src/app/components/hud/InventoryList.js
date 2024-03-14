@@ -1,6 +1,6 @@
 import styles from "./InventoryList.module.css";
 import {
-  PLACEMENT_TYPE_WATER_PICKUP,
+  PLACEMENT_TYPE_WATER_PICKUP, LOCK_KEY_COLORS, PLACEMENT_TYPE_KEY
 } from "../../helpers/consts";
 import { TILES } from "../../helpers/tiles";
 import Sprite from "../object-graphics/Sprite";
@@ -18,10 +18,18 @@ const showInventory = [
     key: "KEY_GREEN",
     tile: TILES.GREEN_KEY,
   },
-  // {
-  //   key: "KEY_WHITE",
-  //   title: TILES.WHITE_KEY,
-  // },
+  {
+    key: "KEY_ORANGE",
+    tile: TILES.ORANGE_KEY,
+  },
+  {
+    key: "KEY_WHITE",
+    tile: TILES.WHITE_KEY,
+  },
+  {
+    key: "KEY_CHEETOS",
+    tile: TILES.CHEETOS_KEY,
+  },
 ];
 
 export default function InventoryList({ level }) {

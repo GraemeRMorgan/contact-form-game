@@ -117,6 +117,13 @@ import { Placement } from "./Placement";
        this.level.completeLevel();
        soundsManager.playSfx(SFX.WIN);
      }
+
+     const conversationStart = collision.withConversation();
+     if(conversationStart) {
+      this.level.setConversation();
+
+     }
+
    }
  
    getYTranslate() {

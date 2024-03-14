@@ -1,6 +1,8 @@
 import { Placement } from "./Placement";
 import { LOCK_KEY_COLORS } from "../helpers/consts";
 import ElevatedSprite from "../components/object-graphics/ElevatedSprite";
+import Sprite from "../components/object-graphics/ElevatedSprite";
+
 import { TILES } from "../helpers/tiles";
 
 export class KeyPlacement extends Placement {
@@ -15,6 +17,8 @@ export class KeyPlacement extends Placement {
 
   renderComponent() {
     let keyColorCoord = this.color;
+    let size = 16;
+    
 
     switch (keyColorCoord) {
       case LOCK_KEY_COLORS.BLUE:
@@ -43,6 +47,6 @@ export class KeyPlacement extends Placement {
         break;
     }
 
-    return <ElevatedSprite frameCoord={keyColorCoord} />;
+    return <ElevatedSprite frameCoord={keyColorCoord} size={size}/>
   }
 }

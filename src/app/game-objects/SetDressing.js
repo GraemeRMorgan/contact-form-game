@@ -2,6 +2,7 @@ import { Placement } from "./Placement";
 import Sprite from "../components/object-graphics/Sprite";
 import { SET_DRESSING_TYPES } from "../helpers/consts";
 import { TILES } from "../helpers/tiles";
+import GameRestart from "../components/ui/GameRestart";
 
 export class SetDressing extends Placement {
   constructor(properties, level) {
@@ -10,7 +11,15 @@ export class SetDressing extends Placement {
   }
 
   isSolidForBody(_body) {
+    // Bug where if you wak on a body that isn't solid it changes the value of conversation.
+    // if(this.variation === SET_DRESSING_TYPES.TOILET){
+    //   return false;
+    // }
     return true;
+  }
+
+  conversationOnCollide() {
+    return <GameRestart />;
   }
 
   renderComponent() {
@@ -33,7 +42,7 @@ export class SetDressing extends Placement {
         break;
       case SET_DRESSING_TYPES.TABLE_HOR:
         dressingCoord = TILES.TABLE_HOR;
-        size = 48;
+        size = 32;
         break;
       case SET_DRESSING_TYPES.TABLE_VERT:
         dressingCoord = TILES.TABLE_VERT;
@@ -70,6 +79,62 @@ export class SetDressing extends Placement {
       case SET_DRESSING_TYPES.TIGHE_BED:
         dressingCoord = TILES.TIGHE_BED;
         size = 64;
+        break;
+      case SET_DRESSING_TYPES.AJ:
+        dressingCoord = TILES.AJ;
+        size = 32;
+        break;
+      case SET_DRESSING_TYPES.TOILET:
+        dressingCoord = TILES.TOILET;
+        size = 32;
+        break;
+      case SET_DRESSING_TYPES.SINK:
+        dressingCoord = TILES.SINK;
+        size = 32;
+        break;
+      case SET_DRESSING_TYPES.HOR_BED:
+        dressingCoord = TILES.HOR_BED;
+        size = 32;
+        break;
+      case SET_DRESSING_TYPES.ELEVATOR_DOOR_L:
+        dressingCoord = TILES.ELEVATOR_DOOR_L;
+        break;
+      case SET_DRESSING_TYPES.ELEVATOR_DOOR_C:
+        dressingCoord = TILES.ELEVATOR_DOOR_C;
+        break;
+      case SET_DRESSING_TYPES.ELEVATOR_DOOR_R:
+        dressingCoord = TILES.ELEVATOR_DOOR_R;
+        break;
+      case SET_DRESSING_TYPES.BATH_SIGN:
+        dressingCoord = TILES.BATH_SIGN;
+        break;
+      case SET_DRESSING_TYPES.TP_ROLL:
+        dressingCoord = TILES.TP_ROLL;
+        break;
+      case SET_DRESSING_TYPES.TRASH:
+        dressingCoord = TILES.TRASH;
+        break;
+      case SET_DRESSING_TYPES.COMPUTER_DESK:
+        dressingCoord = TILES.COMPUTER_DESK;
+        size = 48;
+        break;
+      case SET_DRESSING_TYPES.BOOKSHELF_VERT:
+        dressingCoord = TILES.BOOKSHELF_VERT;
+        size = 32;
+        break;
+      case SET_DRESSING_TYPES.LASER_WALL_OFF:
+        dressingCoord = TILES.LASER_WALL_OFF;
+        break;
+      case SET_DRESSING_TYPES.CONSOLE_WALL_GREEN:
+        dressingCoord = TILES.CONSOLE_WALL_GREEN;
+        break;
+      case SET_DRESSING_TYPES.TABLE_LEFT:
+        dressingCoord = TILES.TABLE_LEFT;
+        size = 32;
+        break;
+      case SET_DRESSING_TYPES.SHELF_LEFT:
+        dressingCoord = TILES.SHELF_LEFT;
+        size = 32;
         break;
 
       default:

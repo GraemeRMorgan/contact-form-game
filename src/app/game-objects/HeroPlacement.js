@@ -40,6 +40,9 @@ export class HeroPlacement extends BodyPlacement {
       return;
     }
 
+    //Check for conversation at next position
+    const possibleCoversation = null;
+
     //Make sure the next space is available
     if (this.isSolidAtNextPosition(direction)) {
       return;

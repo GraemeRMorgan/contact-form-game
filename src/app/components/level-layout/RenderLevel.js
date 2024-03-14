@@ -13,6 +13,7 @@ import TopHud from "../hud/TopHud";
 import GameStart from "../ui/GameStart";
 import GameFinished from "../ui/GameFinished";
 import GameRestart from "../ui/GameRestart";
+import Conversation from "../ui/Conversation";
 import Menu from "../ui/Menu";
 
 const RenderLevel = () => {
@@ -71,6 +72,9 @@ const RenderLevel = () => {
         </div>
         {/* <FlourCount level={level} /> */}
         <TopHud level={level} />
+        {level.conversation && <Conversation />}
+        {level.deathCollision && <GameRestart />}
+        {/* <Conversation /> */}
         {/* {level.isCompleted && <LevelCompleteMessage />}
       {level.deathOutcome && <DeathMessage level={level} />} */}
       </div>

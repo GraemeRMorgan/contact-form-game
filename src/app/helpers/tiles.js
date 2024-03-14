@@ -33,8 +33,9 @@ export const TILES = {
   WHITE_KEY: "4x3",
   CHEETOS_LOCK:"1x2",
   CHEETOS_KEY: "3x3",
-  LASER_LOCK_WALL: "16x1",
-  LASER_LOCK_ON: "18x1",
+
+  // Conversation
+  CONVERSATION: "0x3",
 
   // Lasers
   LASER_WALL_ON: "16x1",
@@ -76,6 +77,16 @@ export const TILES = {
   WALL_INT_HOR: "7x1",
   WALL_INT_BL: "6x2",
   WALL_INT_BR: "6x1",
+  // NEW
+  WALL_INT_TR: "7x3",
+  WALL_INT_TL: "6x3",
+  WALL_INT_T_L: "12x5",
+  WALL_INT_T_R: "12x4",
+  WALL_INT_T_BOTTOM: "13x5",
+  BATHROOM_DOOR: "10x5",
+  BATHROOM_DOOR_L : "8x3",
+  BATHROOM_DOOR_R : "9x3",
+
   WALL_INT_VERT_B_END: "7x0",
   WALL_INT_VERT_T_END: "8x0",
   WALL_INT_HOR_END_L: "8x1",
@@ -106,9 +117,25 @@ export const TILES = {
   BACTA_TANK_GREEN_TL: "21x10",
   TIGHE_BED: "19x13",
   AJ: "4x11",
+  TOILET: "13x14",
+  SINK: "16x14",
+  HOR_BED: "18x12",
+  ELEVATOR_DOOR_L: "9x13",
+  ELEVATOR_DOOR_C: "10x13",
+  ELEVATOR_DOOR_R: "11x13",
+  BATH_SIGN: "22x2",
+  TP_ROLL: "15x14",
+  TRASH: "15x15",
+  COMPUTER_DESK: "8x10",
+  BOOKSHELF_VERT: "12x16",
+  LASER_WALL_OFF: "17x1",
+  CONSOLE_WALL_GREEN: "17x0",
+  SHELF_LEFT: "9x16",
+  TABLE_LEFT: "14x16",
 
   // Collider 
   COLLIDER: "1x2",
+  DEATH_COLLIDER: "0x9",
 
   // Floor Types
   FLOOR_WARNING1: "13x0",

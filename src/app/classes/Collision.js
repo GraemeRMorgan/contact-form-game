@@ -69,4 +69,10 @@ export class Collision {
       });
     }
 
+    withConversation(){
+      return this.placementsAtPosition.find((p) => {
+        return p.conversationOnCollide(this.forBody);
+      })
+    }
+
   }

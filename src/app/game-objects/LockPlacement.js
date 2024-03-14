@@ -12,7 +12,11 @@ export class LockPlacement extends Placement {
   }
 
   isSolidForBody(_body) {
-    return true;
+    if (this.color === "CHEETOS") {
+      return false;
+    } else {
+      return true;
+    }
   }
 
   tick() {
@@ -20,10 +24,6 @@ export class LockPlacement extends Placement {
       this.collectInFrames -= 1;
       if (this.collectInFrames === 0) {
         this.level.deletePlacement(this);
-        if(LOCK_KEY_COLORS.WHITE){
-          // Disable the laser...
-          this.level.setLaserValue(false);
-        }
         soundsManager.playSfx(SFX.OPEN_CHEST);
       }
     }
@@ -37,6 +37,10 @@ export class LockPlacement extends Placement {
   unlock() {
     if (this.collectInFrames > 0) {
       return;
+    }
+    if (this.color === "WHITE") {
+      // Disable the laser...
+      this.level.setLaserValue(false);
     }
     this.collectInFrames = 11;
   }
@@ -72,6 +76,7 @@ export class LockPlacement extends Placement {
         lockColorCoord = TILES.GREEN_LOCK;
         break;
     }
+  
 
     return <Sprite frameCoord={lockColorCoord} size={size} />;
   }

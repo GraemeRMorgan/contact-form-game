@@ -85,6 +85,33 @@ export class WallPlacement extends Placement {
       case WALL_TYPES.WALL_CELL_DOORS:
         wallTileCoord = TILES.WALL_CELL_DOORS;
         break;
+      case WALL_TYPES.WALL_INT_TR:
+        wallTileCoord = TILES.WALL_INT_TR;
+        break;
+      case WALL_TYPES.WALL_INT_TL:
+        wallTileCoord = TILES.WALL_INT_TL;
+        break;
+      case WALL_TYPES.WALL_INT_T_L:
+        wallTileCoord = TILES.WALL_INT_T_L;
+        break;
+      case WALL_TYPES.WALL_INT_T_R:
+        wallTileCoord = TILES.WALL_INT_T_R;
+        break;
+      case WALL_TYPES.WALL_INT_T_BOTTOM:
+        wallTileCoord = TILES.WALL_INT_T_BOTTOM;
+        break;
+      case WALL_TYPES.BATHROOM_DOOR:
+        wallTileCoord = TILES.BATHROOM_DOOR;
+        break;
+      case WALL_TYPES.BATHROOM_DOOR_L:
+        wallTileCoord = TILES.BATHROOM_DOOR_L;
+        break;
+      case WALL_TYPES.BATHROOM_DOOR_R:
+        wallTileCoord = TILES.BATHROOM_DOOR_R;
+        break;
+
+      
+
       default:
         wallTileCoord = TILES.WALL_VERTICAL;
         break;

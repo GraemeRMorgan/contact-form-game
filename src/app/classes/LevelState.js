@@ -30,6 +30,8 @@ export class LevelState {
     this.tilesWidth = levelData.tilesWidth;
     this.tilesHeight = levelData.tilesHeight;
     this.laserValue = true;
+    this.conversation = null;
+    this.deathCollision = null;
     this.placements = levelData.placements.map((config) => {
       return placementFactory.createPlacement(config, this);
     })
@@ -118,6 +120,14 @@ export class LevelState {
   getLaserValue(){
     return this.laserValue;
   }
+  setConversation(){
+    this.conversation = !this.conversation;
+  }
+
+  setDeathCollision(causeOfDeath){
+    this.deathOutcome = causeOfDeath;
+    this.gameLoop.stop();
+  }
 
   setDeathOutcome(causeOfDeath) {
     this.deathOutcome = causeOfDeath;
@@ -140,6 +150,7 @@ export class LevelState {
       cameraTransformX: this.camera.transformX,
       cameraTransformY: this.camera.transformY,
       inventory: this.inventory,
+      conversation: this.conversation,
       restart: () => {
 
         this.start();

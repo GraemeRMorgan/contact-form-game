@@ -21,6 +21,8 @@ const {
     PLACEMENT_TYPE_COLLIDER,
     PLACEMENT_TYPE_FLOOR,
     PLACEMENT_TYPE_LASERS,
+    PLACEMENT_TYPE_CONVERSATION,
+    PLACEMENT_TYPE_DEATH_COLLIDER,
 
 
 
@@ -44,6 +46,8 @@ import { SetDressing } from "../game-objects/SetDressing";
 import { ColliderPlacement } from "../game-objects/ColliderPlacement";
 import { FloorTilesPlacement } from "../game-objects/FloorTilesPlacement";
 import { LaserPlacement } from "../game-objects/LaserPlacement";
+import { ConversationPlacement } from "../game-objects/ConversationPlacement";
+import { DeathColliderPlacement } from "../game-objects/DeathColliderPlacement";
 
 
 
@@ -70,6 +74,8 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_COLLIDER] : ColliderPlacement,
     [PLACEMENT_TYPE_FLOOR] : FloorTilesPlacement,
     [PLACEMENT_TYPE_LASERS] : LaserPlacement,
+    [PLACEMENT_TYPE_CONVERSATION] : ConversationPlacement,
+    [PLACEMENT_TYPE_DEATH_COLLIDER] : DeathColliderPlacement,
 
 
 
