@@ -63,7 +63,7 @@ export class Placement {
   completesLevelOnCollide() {
     return false;
   }
-  conversationOnCollide(_body){
+  conversationOnCollide(){
     return null;
   }
 

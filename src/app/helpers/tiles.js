@@ -33,9 +33,17 @@ export const TILES = {
   WHITE_KEY: "4x3",
   CHEETOS_LOCK:"1x2",
   CHEETOS_KEY: "3x3",
+  REGULAR1: "10x3",
+  REGULAR2: "10x4",
+  REGULAR3: "10x5", 
+
 
   // Conversation
-  CONVERSATION: "0x3",
+  AJ_CONVO_1: "1x9",
+  GUARD_CONVO: "1x9",
+  TOILET_THOUGHT: "1x9",
+  LASER_THOUGHT: "1x9",
+  OOZE_THOUGHT: "1x9",
 
   // Lasers
   LASER_WALL_ON: "16x1",
@@ -59,9 +67,21 @@ export const TILES = {
   WATER_TOP1: "9x5",
   WATER_TOP2: "9x6",
   WATER_LEFT_PEAK: "7x6",
-  WATER_PLAIN: "1x5",
+  WATER_PLAIN: "7x7",
   WATER_BUBBLES1: "0x5",
   WATER_BUBBLES2: "2x5",
+  WATER_ANIM_A: "1x5",
+  WATER_ANIM_A1: "0x8",
+  WATER_ANIM_A2: "1x8",
+  WATER_ANIM_A3: "2x8",
+  WATER_ANIM_A4: "3x8",
+  WATER_ANIM_A5: "4x8",
+  WATER_ANIM_A6: "5x8",
+  WATER_ANIM_A7: "6x8",
+  WATER_DANK: "2x5",
+  SCREEN_TEXT1: "20x17",
+  SCREEN_TEXT2: "22x17",
+
 
   // Walls
   WALL_TOP : "3x0",
@@ -117,7 +137,8 @@ export const TILES = {
   BACTA_TANK_GREEN_TL: "21x10",
   TIGHE_BED: "19x13",
   AJ: "4x11",
-  TOILET: "13x14",
+  TOILET1: "13x15",
+  TOILET2: "14x15",
   SINK: "16x14",
   HOR_BED: "18x12",
   ELEVATOR_DOOR_L: "9x13",
@@ -132,6 +153,44 @@ export const TILES = {
   CONSOLE_WALL_GREEN: "17x0",
   SHELF_LEFT: "9x16",
   TABLE_LEFT: "14x16",
+
+
+
+  // AJ 
+  AJ_1: "4x10",
+  AJ_2: "6x10",
+  AJ_3: "4x12",
+  AJ_4: "4x10",
+
+  // BACTA TANKS
+  BACTA_GREEN: "14x2",
+  BACTA_GREEN1: "14x2",
+  BACTA_GREEN2: "14x4",
+  BACTA_GREEN3: "14x6",
+  BACTA_GREEN4: "14x8",
+  BACTA_GREEN5: "14x10",
+  BACTA_PINK: "16x2",
+  BACTA_PINK1: "16x2",
+  BACTA_PINK2: "16x4",
+
+  // PIPES
+  PIPE_VERT: "9x7",
+  PIPE_VERT_OUT: "8x7",
+  PIPE_VERT_IN: "0x6",
+  PIPE_TURN1: "1x6",
+  PIPE_TURN2: "4x6",
+  PIPE_HOR1: "2x6",
+  PIPE_HOR2: "3x6",
+  PIPE_DRAIN: "7x8",
+  PIPE_DRAIN1: "7x8",
+  PIPE_DRAIN2: "8x8",
+  PIPE_DRAIN3: "9x8",
+  PIPE_DRAIN4: "10x8",
+  PIPE_DRAIN5: "11x8",
+
+  //NULL
+  NULL: "1x2",
+  ERROR: "1x9",
 
   // Collider 
   COLLIDER: "1x2",
@@ -148,6 +207,7 @@ export const TILES = {
   FLOOR_WARNING_VERT1: "22x4",
   FLOOR_WARNING_VERT2: "22x5",
   FLOOR_WARNING_VERT3: "22x6",
+  FLOOR_GOO: "16x16",
 
 
   //Goal

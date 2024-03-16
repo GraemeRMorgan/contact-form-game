@@ -10,17 +10,15 @@ export class SetDressing extends Placement {
     this.variation = properties.variation;
   }
 
-  isSolidForBody(_body) {
-    // Bug where if you wak on a body that isn't solid it changes the value of conversation.
-    // if(this.variation === SET_DRESSING_TYPES.TOILET){
-    //   return false;
-    // }
+  isSolidForBody() {
+    // Bug where if you wak on a body that isn't solid it changes the value of conversation
+    if(this.variation === SET_DRESSING_TYPES.TOILET1){
+      return false;
+    }
     return true;
   }
 
-  conversationOnCollide() {
-    return <GameRestart />;
-  }
+
 
   renderComponent() {
     let dressingCoord = this.variation;
@@ -84,9 +82,13 @@ export class SetDressing extends Placement {
         dressingCoord = TILES.AJ;
         size = 32;
         break;
-      case SET_DRESSING_TYPES.TOILET:
-        dressingCoord = TILES.TOILET;
-        size = 32;
+      case SET_DRESSING_TYPES.TOILET1:
+        dressingCoord = TILES.TOILET1;
+        size = 16;
+        break;
+      case SET_DRESSING_TYPES.TOILET2:
+        dressingCoord = TILES.TOILET2;
+        size = 16;
         break;
       case SET_DRESSING_TYPES.SINK:
         dressingCoord = TILES.SINK;
@@ -136,11 +138,20 @@ export class SetDressing extends Placement {
         dressingCoord = TILES.SHELF_LEFT;
         size = 32;
         break;
-
+      case SET_DRESSING_TYPES.SCREEN_TEXT1:
+        dressingCoord = TILES.SCREEN_TEXT1;
+        break;
       default:
         dressingCoord = TILES.GOAL_ENABLED;
         break;
     }
-    return <Sprite frameCoord={dressingCoord} size={size} />;
+    // pipeCoord = this.level.animatedFrames.pipeDrainFrames.activeFrame;
+    //     return <Sprite frameCoord={pipeCoord} />
+    if (dressingCoord === TILES.SCREEN_TEXT1) {
+      dressingCoord = this.level.animatedFrames.screenTextFrames.activeFrame;
+      return <Sprite frameCoord={dressingCoord} size={32} />;
+    } else {
+      return <Sprite frameCoord={dressingCoord} size={size} />;
+    }
   }
 }

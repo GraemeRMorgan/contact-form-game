@@ -9,6 +9,7 @@ export class LockPlacement extends Placement {
     super(properties, level);
     this.color = properties.color ?? LOCK_KEY_COLORS.BLUE;
     this.collectInFrames = 0;
+    this.frame = 1;
   }
 
   isSolidForBody(_body) {
@@ -27,9 +28,24 @@ export class LockPlacement extends Placement {
         soundsManager.playSfx(SFX.OPEN_CHEST);
       }
     }
+
+    // if(this.frame <= 3){
+    //   this.frame += 0.5;
+    //   if(this.frame === 3){
+    //     this.level.deletePlacement(this)
+    //   }
+    //   return;
+    // }
+    // this.level.deletePlacement(this);
   }
 
   canBeUnlocked() {
+    // if (this.color === "REGULAR") {
+    //   return this.level.inventory.has(requiredKey);
+    // } else {
+    //   const requiredKey = `KEY_${this.color}`;
+    //   return this.level.inventory.has(requiredKey);
+    // }
     const requiredKey = `KEY_${this.color}`;
     return this.level.inventory.has(requiredKey);
   }
@@ -40,6 +56,7 @@ export class LockPlacement extends Placement {
     }
     if (this.color === "WHITE") {
       // Disable the laser...
+      this.level
       this.level.setLaserValue(false);
     }
     this.collectInFrames = 11;
@@ -72,12 +89,17 @@ export class LockPlacement extends Placement {
       case LOCK_KEY_COLORS.CHEETOS:
         lockColorCoord = TILES.CHEETOS_LOCK;
         break;
+      case LOCK_KEY_COLORS.REGULAR:
+        lockColorCoord = TILES[`REGULAR${Math.ceil(this.frame)}`];
+        // lockColorCoord = TILES.REGULAR1
+        break;
       default:
         lockColorCoord = TILES.GREEN_LOCK;
         break;
     }
-  
 
+    // return <Sprite frameCoord={lockColorCoord} size={size} />;
+    // return lockColorCoord === `REGULAR${Math.ceil(this.frame)}` ? <Sprite frameCoord={TILES[lockColorCoord]} /> : <Sprite frameCoord={lockColorCoord} size={size} />;
     return <Sprite frameCoord={lockColorCoord} size={size} />;
   }
 }

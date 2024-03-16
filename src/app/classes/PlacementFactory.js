@@ -23,6 +23,9 @@ const {
     PLACEMENT_TYPE_LASERS,
     PLACEMENT_TYPE_CONVERSATION,
     PLACEMENT_TYPE_DEATH_COLLIDER,
+    PLACEMENT_TYPE_AJ,
+    PLACEMENT_TYPE_BACTA,
+    PLACEMENT_TYPE_PIPE,
 
 
 
@@ -48,6 +51,9 @@ import { FloorTilesPlacement } from "../game-objects/FloorTilesPlacement";
 import { LaserPlacement } from "../game-objects/LaserPlacement";
 import { ConversationPlacement } from "../game-objects/ConversationPlacement";
 import { DeathColliderPlacement } from "../game-objects/DeathColliderPlacement";
+import { AjPlacement } from "../game-objects/AjPlacement";
+import { BactaTanksPlacement } from "../game-objects/BactaTanksPlacement";
+import { PipePlacement } from "../game-objects/PipePlacement";
 
 
 
@@ -76,6 +82,9 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_LASERS] : LaserPlacement,
     [PLACEMENT_TYPE_CONVERSATION] : ConversationPlacement,
     [PLACEMENT_TYPE_DEATH_COLLIDER] : DeathColliderPlacement,
+    [PLACEMENT_TYPE_AJ] : AjPlacement,
+    [PLACEMENT_TYPE_BACTA] : BactaTanksPlacement,
+    [PLACEMENT_TYPE_PIPE] : PipePlacement,
 
 
 

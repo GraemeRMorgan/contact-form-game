@@ -12,6 +12,19 @@
   z-index: 100;
 }
 
+.conversationWrapper {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: hsla(0, 100%, 100%, 1);
+  gap: 24px;
+  padding: 48px;
+  background-color: #c4a06e;
+  border: 2px solid hsla(210, 2%, 32%, 1);
+  z-index: 100;
+}
+
 
 .button {
   font-family: inherit;

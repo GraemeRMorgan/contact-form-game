@@ -23,6 +23,9 @@ import {
   PLACEMENT_TYPE_LASERS,
   PLACEMENT_TYPE_CONVERSATION,
   PLACEMENT_TYPE_DEATH_COLLIDER,
+  PLACEMENT_TYPE_AJ,
+  PLACEMENT_TYPE_BACTA,
+  PLACEMENT_TYPE_PIPE,
 } from "../helpers/consts";
 
 import { waterArea } from "./WaterArea";
@@ -191,6 +194,7 @@ const level = {
     { x: 12, y: 18, type: PLACEMENT_TYPE_FLOOR, variation: "FLOOR_CLEAN" },
     { x: 13, y: 18, type: PLACEMENT_TYPE_FLOOR, variation: "FLOOR_CLEAN" },
     { x: 14, y: 18, type: PLACEMENT_TYPE_FLOOR, variation: "FLOOR_CLEAN" },
+    { x: 12, y: 19, type: PLACEMENT_TYPE_FLOOR, variation: "FLOOR_CLEAN" },
 
     /**
      * LASER HALLWAY
@@ -289,7 +293,6 @@ const level = {
      * Bathroom
      */
     {x: 11,y: 27,type: PLACEMENT_TYPE_WALL,variation: "BATHROOM_DOOR_L",},
-    // { x: 12, y: 27, type: PLACEMENT_TYPE_WALL, variation: "BATHROOM_DOOR" },
     { x: 13, y: 27,type: PLACEMENT_TYPE_WALL,variation: "BATHROOM_DOOR_R",},
     { x: 14,y: 27,type: PLACEMENT_TYPE_WALL,variation: "WALL_INT_HOR",},
     { x: 15,y: 27,type: PLACEMENT_TYPE_WALL,variation: "WALL_INT_TR",},
@@ -346,22 +349,22 @@ const level = {
 
     { x: 3, y: 4, type: PLACEMENT_TYPE_WATER, color: "WATER_TOP1" },
     { x: 3, y: 5, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
-    { x: 3, y: 6, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
+    { x: 3, y: 6, type: PLACEMENT_TYPE_WATER, color: "WATER_ANIM_A" },
     { x: 3, y: 7, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
     { x: 3, y: 8, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
-    { x: 3, y: 9, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
+    { x: 3, y: 9, type: PLACEMENT_TYPE_WATER, color: "WATER_DANK" },
     { x: 3, y: 10, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
     { x: 3, y: 11, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
-    { x: 3, y: 12, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
+    { x: 3, y: 12, type: PLACEMENT_TYPE_WATER, color: "WATER_ANIM_C" },
 
     { x: 2, y: 4, type: PLACEMENT_TYPE_WATER, color: "WATER_TOP1" },
     { x: 2, y: 5, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
-    { x: 2, y: 6, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
+    { x: 2, y: 6, type: PLACEMENT_TYPE_WATER, color: "WATER_DANK" },
     { x: 2, y: 7, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
     { x: 2, y: 8, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
     { x: 2, y: 9, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
-    { x: 2, y: 10, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
-    { x: 2, y: 11, type: PLACEMENT_TYPE_WATER, color: "WATER_PLAIN" },
+    { x: 2, y: 10, type: PLACEMENT_TYPE_WATER, color: "WATER_ANIM_B" },
+    { x: 2, y: 11, type: PLACEMENT_TYPE_WATER, color: "WATER_DANK" },
     { x: 2, y: 12, type: PLACEMENT_TYPE_WATER, color: "WATER_BOTTOM" },
 
     { x: 1, y: 4, type: PLACEMENT_TYPE_WATER, color: "TOP_LEFT" },
@@ -428,6 +431,10 @@ const level = {
     { x: 20, y: 24, type: PLACEMENT_TYPE_SETDRESSING, variation: "BOOKSHELF_VERT" },
     { x: 20, y: 26, type: PLACEMENT_TYPE_SETDRESSING, variation: "BOOKSHELF_VERT" },
 
+    /**
+     * Laser Hallway
+     */
+    { x: 1, y: 19, type: PLACEMENT_TYPE_SETDRESSING, variation: "COMPUTER_DESK" },
 
 
 
@@ -438,18 +445,30 @@ const level = {
      * MIND CONTROL ROOM
      */
     { x: 10, y: 14, type: PLACEMENT_TYPE_SETDRESSING, variation: "TIGHE_BED" },
-    {x: 14, y: 14,type: PLACEMENT_TYPE_SETDRESSING,variation: "BACTA_TANK_PINK_TR",},
-    {x: 10, y: 14,type: PLACEMENT_TYPE_SETDRESSING,variation: "BACTA_TANK_GREEN_TL",},
+    { x: 12, y: 14, type: PLACEMENT_TYPE_SETDRESSING, variation: "SCREEN_TEXT1" },
+    {x: 14, y: 14,type: PLACEMENT_TYPE_BACTA, variation: "BACTA_PINK",},
+    {x: 9, y: 14,type: PLACEMENT_TYPE_BACTA, variation: "BACTA_GREEN"},
     {x: 10, y: 16,type: PLACEMENT_TYPE_SETDRESSING,variation: "TABLE_VERT",},
 
     /**
      * WATER AREA
      */
-    { x: 1, y: 0, type: PLACEMENT_TYPE_SETDRESSING, variation: "BACTA_TANK_BLUE" },
-    { x: 3, y: 0, type: PLACEMENT_TYPE_SETDRESSING, variation: "BACTA_TANK_BLUE" },
+    
+    { x: 4, y: 0, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_VERT_IN" },
+    { x: 4, y: 1, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_TURN1" },
+    { x: 3, y: 1, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_HOR2" },
+    { x: 2, y: 1, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_HOR1" },
+    { x: 1, y: 1, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_TURN2" },
+    { x: 1, y: 2, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_VERT" },
+    { x: 1, y: 3, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_VERT_OUT" },
+    { x: 1, y: 4, type: PLACEMENT_TYPE_PIPE, variation: "PIPE_DRAIN" },
+
+
+
+    { x: 1, y: 13, type: PLACEMENT_TYPE_FLOOR, variation: "FLOOR_GOO" },
     { x: 5, y: 15, type: PLACEMENT_TYPE_SETDRESSING, variation: "TABLE_HOR" },
     { x: 1, y: 17, type: PLACEMENT_TYPE_SETDRESSING, variation: "TABLE_LEFT" },
-    { x: 1, y: 18, type: PLACEMENT_TYPE_COLLIDER},
+   
 
 
 
@@ -466,8 +485,15 @@ const level = {
     /**
      * AJs ROOM
      */
-    { x: 4, y: 28, type: PLACEMENT_TYPE_SETDRESSING, variation: "BED" },
+    { x: 4, y: 29, type: PLACEMENT_TYPE_SETDRESSING, variation: "BED" },
+    { x: 4, y: 28, type: PLACEMENT_TYPE_SETDRESSING, variation: "TOILET1" },
+    { x: 5, y: 28, type: PLACEMENT_TYPE_SETDRESSING, variation: "TOILET2" },
 
+
+    /**
+     * Middle Cell
+     */
+    { x: 8, y: 29, type: PLACEMENT_TYPE_SETDRESSING, variation: "BED" },
     /**
      * GUARD AREA
      */
@@ -482,7 +508,8 @@ const level = {
     // Sink
     {x: 11,y: 28,type: PLACEMENT_TYPE_SETDRESSING, variation: "SINK",},
     // Toilet
-    {x: 13,y: 28,type: PLACEMENT_TYPE_SETDRESSING, variation: "TOILET",},
+    {x: 13,y: 29,type: PLACEMENT_TYPE_SETDRESSING, variation: "TOILET1",},
+    {x: 14,y: 29,type: PLACEMENT_TYPE_SETDRESSING, variation: "TOILET2",},
     {x: 14,y: 29,type: PLACEMENT_TYPE_COLLIDER,},
     {x: 11,y: 29,type: PLACEMENT_TYPE_COLLIDER,},
 
@@ -505,16 +532,29 @@ const level = {
      */
 
     // Hero
-    { x: 10, y: 8, type: PLACEMENT_TYPE_HERO },
+    { x: 17, y: 22, type: PLACEMENT_TYPE_HERO },
     // AJ
-    { x: 1, y: 27, type: PLACEMENT_TYPE_SETDRESSING, variation: "AJ" },
+    { x: 1, y: 27, type: PLACEMENT_TYPE_AJ},
     // Goal
     { x: 7, y: 2, type: PLACEMENT_TYPE_GOAL },
     //Conversation
-    { x: 3, y: 26, type: PLACEMENT_TYPE_CONVERSATION },
+    { x: 3, y: 26, type: PLACEMENT_TYPE_CONVERSATION, variation:"AJ_CONVO_1"},
+    { x: 17, y: 28, type: PLACEMENT_TYPE_CONVERSATION, variation:"GUARD_CONVO"},
+    { x: 7, y: 20, type: PLACEMENT_TYPE_CONVERSATION, variation:"LASER_THOUGHT"},
+    { x: 7, y: 21, type: PLACEMENT_TYPE_CONVERSATION, variation:"LASER_THOUGHT"},
+    { x: 7, y: 22, type: PLACEMENT_TYPE_CONVERSATION, variation:"LASER_THOUGHT"},
+    { x: 1, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
+    { x: 2, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
+    { x: 3, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
+    { x: 4, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
+    // { x: 18, y: 28, type: PLACEMENT_TYPE_CONVERSATION, variation:"TOILET_THOUGHT"},
+
+
+
+
 
     // Key Placement
-    { x: 2, y: 2, type: PLACEMENT_TYPE_KEY, color: "TREASURE" },
+    { x: 3, y: 3, type: PLACEMENT_TYPE_KEY, color: "TREASURE" },
     { x: 14, y: 18, type: PLACEMENT_TYPE_KEY, color: "ORANGE" },
     { x: 17 , y: 29, type: PLACEMENT_TYPE_KEY, color: "CHEETOS" },
     { x: 11, y: 30, type: PLACEMENT_TYPE_KEY, color: "WHITE" },
@@ -527,14 +567,15 @@ const level = {
     { x: 18, y: 4, type: PLACEMENT_TYPE_LOCK, color: "ORANGE" },
     { x: 9, y: 19, type: PLACEMENT_TYPE_LOCK, color: "WHITE" },
     { x: 3, y: 27, type: PLACEMENT_TYPE_LOCK, color: "CHEETOS" },
+
     // Mind Control
     { x: 12, y: 19, type: PLACEMENT_TYPE_LOCK, color: "BLUE" },
     // Main
     { x: 7, y: 4, type: PLACEMENT_TYPE_LOCK, color: "BLUE" },
 
     // Death Collider
-    { x: 6, y: 20, type: PLACEMENT_TYPE_DEATH_COLLIDER},
-    { x: 6, y: 21, type: PLACEMENT_TYPE_DEATH_COLLIDER},
+    // { x: 6, y: 20, type: PLACEMENT_TYPE_DEATH_COLLIDER},
+    // { x: 6, y: 21, type: PLACEMENT_TYPE_DEATH_COLLIDER},
 
     // Laser Placement
     {x: 6,y: 22,type: PLACEMENT_TYPE_LASERS,variation: "LASER_ON",isOn: true,},

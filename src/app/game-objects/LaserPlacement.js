@@ -1,5 +1,5 @@
 import { Placement } from "./Placement";
-import { LASER_TYPES } from "../helpers/consts";
+import { LASER_TYPES, PLACEMENT_TYPE_HERO } from "../helpers/consts";
 import { TILES } from "../helpers/tiles";
 import Sprite from "../components/object-graphics/Sprite";
 import soundsManager, { SFX } from "../classes/Sounds";
@@ -8,6 +8,17 @@ export class LaserPlacement extends Placement {
   constructor(properties, level) {
     super(properties, level);
     this.variation = properties.variation;
+  }
+
+  damagesBodyOnCollide(body) {
+    const { inventory } = this.level;
+    return (
+      body.type === PLACEMENT_TYPE_HERO 
+    );
+  }
+
+  isSolidForBody(_body) {
+    return true;
   }
 
 

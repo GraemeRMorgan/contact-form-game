@@ -12,6 +12,7 @@ export class FloorTilesPlacement extends Placement {
 
   renderComponent() {
     let floorCoord = this.variation;
+    let size = 16;
 
     switch (floorCoord) {
       case FLOOR_TYPES.FLOOR_CLEAN:
@@ -44,11 +45,15 @@ export class FloorTilesPlacement extends Placement {
       case FLOOR_TYPES.FLOOR_WARNING_VERT3:
         floorCoord = TILES.FLOOR_WARNING_VERT3;
         break;
+      case FLOOR_TYPES.FLOOR_GOO:
+        floorCoord = TILES.FLOOR_GOO;
+        size = 64;
+        break;
       default:
         floorCoord = TILES.FLOOR_WARNING1;
         break;
     }
 
-    return <Sprite frameCoord={floorCoord} />;
+    return <Sprite frameCoord={floorCoord} size={size}/>;
   }
 }

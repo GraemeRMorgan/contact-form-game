@@ -9,7 +9,6 @@ import {
 } from "../helpers/consts";
 
 import { TILES } from "../helpers/tiles";
-import { Tillana } from "next/font/google";
 
 export class WaterPlacement extends Placement {
   constructor(properties, level) {
@@ -61,33 +60,41 @@ export class WaterPlacement extends Placement {
       case WATER_TYPES.WATER_PLAIN:
         waterFrame = TILES.WATER_PLAIN
         break;
+      case WATER_TYPES.WATER_ANIM_A:
+        waterFrame = TILES.WATER_ANIM_A;
+        break;
+      case WATER_TYPES.WATER_ANIM_B:
+        waterFrame = "BUBBLES2";
+        break;
+      case WATER_TYPES.WATER_ANIM_C:
+        waterFrame = "BUBBLES3";
+        break;
+      case WATER_TYPES.WATER_DANK:
+        waterFrame = TILES.WATER_DANK;
+        break;
       default:
-        waterFrame = TILES.WATER_PLAIN
+        waterFrame = TILES.WATER_PLAIN;
+    }
+
+  
+    if(waterFrame === TILES.WATER_ANIM_A){
+      waterFrame = this.level.animatedFrames.waterBubblesFrames.activeFrame;
+      return <Sprite frameCoord={waterFrame} />
+    } 
+    else if(waterFrame === "BUBBLES2"){
+      waterFrame = this.level.animatedFrames.waterBubblesFrames2.activeFrame;
+      return <Sprite frameCoord={waterFrame} />
+    } 
+    else if(waterFrame === "BUBBLES3"){
+      waterFrame = this.level.animatedFrames.waterBubblesFrames3.activeFrame;
+      return <Sprite frameCoord={waterFrame} />
+    } 
+    
+    else {
+      return <Sprite frameCoord={waterFrame} />;
     }
   
-    return <Sprite frameCoord={waterFrame} />;
+    
   }
-
-  // renderComponent() {
-  //   const frameCoord =
-  //     this.color === LOCK_KEY_COLORS.BLUE ? TILES.BLUE_KEY : TILES.GREEN_KEY;
-  //   return <ElevatedSprite frameCoord={frameCoord} />;
-  // }
-
-
-// Second
-// renderComponent() {
-//   const waterFrame = TILES.WATER_PLAIN;
-//    return <Sprite frameCoord={waterFrame} />;
-// }
-
-
-// Original
-  // renderComponent() {
-  //   const waterFrame = this.level.animatedFrames.waterFrame;
-  //    return <Sprite frameCoord={waterFrame} />;
-  // }
-
-
 
 }

@@ -18,6 +18,7 @@ import Menu from "../ui/Menu";
 
 const RenderLevel = () => {
   const [level, setLevel] = useState(null);
+  
   const currentLevelId = useRecoilValue(currentLevelIdAtom);
   useEffect(() => {
     // Create and subscribe to state changes
@@ -37,6 +38,7 @@ const RenderLevel = () => {
   if (!level) {
     return null;
   }
+
 
   const cameraTranslate = `translate3d(${level.cameraTransformX}, ${level.cameraTransformY}, 0)`;
 
@@ -72,7 +74,7 @@ const RenderLevel = () => {
         </div>
         {/* <FlourCount level={level} /> */}
         <TopHud level={level} />
-        {level.conversation && <Conversation />}
+        {level.conversation && <Conversation level={level} setConversation={level.setConversation}/>}
         {level.deathCollision && <GameRestart />}
         {/* <Conversation /> */}
         {/* {level.isCompleted && <LevelCompleteMessage />}

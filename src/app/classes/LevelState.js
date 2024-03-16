@@ -120,8 +120,9 @@ export class LevelState {
   getLaserValue(){
     return this.laserValue;
   }
-  setConversation(){
-    this.conversation = !this.conversation;
+  setConversation(conversationType){
+    console.log("triggered")
+    this.conversation = conversationType
   }
 
   setDeathCollision(causeOfDeath){
@@ -151,6 +152,7 @@ export class LevelState {
       cameraTransformY: this.camera.transformY,
       inventory: this.inventory,
       conversation: this.conversation,
+      setConversation: this.setConversation.bind(this),
       restart: () => {
 
         this.start();
