@@ -26,6 +26,8 @@ const {
     PLACEMENT_TYPE_AJ,
     PLACEMENT_TYPE_BACTA,
     PLACEMENT_TYPE_PIPE,
+    PLACEMENT_TYPE_LASER_THOUGHT,
+    PLACEMENT_TYPE_OOZE_THOUGHT,
 
 
 
@@ -54,6 +56,8 @@ import { DeathColliderPlacement } from "../game-objects/DeathColliderPlacement";
 import { AjPlacement } from "../game-objects/AjPlacement";
 import { BactaTanksPlacement } from "../game-objects/BactaTanksPlacement";
 import { PipePlacement } from "../game-objects/PipePlacement";
+import { LaserThoughtPlacement } from "../game-objects/LaserThoughtPlacement";
+import { OozeThoughtPlacement } from "../game-objects/OozeThoughtPlacement";
 
 
 
@@ -85,6 +89,8 @@ const placementTypeClassMap = {
     [PLACEMENT_TYPE_AJ] : AjPlacement,
     [PLACEMENT_TYPE_BACTA] : BactaTanksPlacement,
     [PLACEMENT_TYPE_PIPE] : PipePlacement,
+    [PLACEMENT_TYPE_LASER_THOUGHT] : LaserThoughtPlacement,
+    [PLACEMENT_TYPE_OOZE_THOUGHT] : OozeThoughtPlacement,
 
 
 

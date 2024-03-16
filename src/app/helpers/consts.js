@@ -29,6 +29,8 @@ export const PLACEMENT_TYPE_DEATH_COLLIDER = "DEATH_COLLIDER"
 export const PLACEMENT_TYPE_AJ = "AJ"
 export const PLACEMENT_TYPE_BACTA = "Bacta"
 export const PLACEMENT_TYPE_PIPE = "Pipe"
+export const PLACEMENT_TYPE_LASER_THOUGHT = "LaserThought"
+export const PLACEMENT_TYPE_OOZE_THOUGHT = "OozeThought"
 
 
 
@@ -190,6 +192,10 @@ export const CONVERSATION_TYPES = {
   LASER_THOUGHT: "LASER_THOUGHT",
   OOZE_THOUGHT: "OOZE_THOUGHT",
   TOILET1: "TOILET1",
+}
+
+export const THOUGHT_TYPES = {
+  RIGID_BODY: "RIGID_BODY",
 }
 
 export const BACTA_TYPES ={

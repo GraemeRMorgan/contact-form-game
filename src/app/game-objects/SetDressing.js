@@ -11,7 +11,6 @@ export class SetDressing extends Placement {
   }
 
   isSolidForBody() {
-    // Bug where if you wak on a body that isn't solid it changes the value of conversation
     if(this.variation === SET_DRESSING_TYPES.TOILET1){
       return false;
     }

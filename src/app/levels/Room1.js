@@ -26,6 +26,8 @@ import {
   PLACEMENT_TYPE_AJ,
   PLACEMENT_TYPE_BACTA,
   PLACEMENT_TYPE_PIPE,
+  PLACEMENT_TYPE_LASER_THOUGHT,
+  PLACEMENT_TYPE_OOZE_THOUGHT,
 } from "../helpers/consts";
 
 import { waterArea } from "./WaterArea";
@@ -540,14 +542,20 @@ const level = {
     //Conversation
     { x: 3, y: 26, type: PLACEMENT_TYPE_CONVERSATION, variation:"AJ_CONVO_1"},
     { x: 17, y: 28, type: PLACEMENT_TYPE_CONVERSATION, variation:"GUARD_CONVO"},
-    { x: 7, y: 20, type: PLACEMENT_TYPE_CONVERSATION, variation:"LASER_THOUGHT"},
-    { x: 7, y: 21, type: PLACEMENT_TYPE_CONVERSATION, variation:"LASER_THOUGHT"},
-    { x: 7, y: 22, type: PLACEMENT_TYPE_CONVERSATION, variation:"LASER_THOUGHT"},
-    { x: 1, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
-    { x: 2, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
-    { x: 3, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
-    { x: 4, y: 13, type: PLACEMENT_TYPE_CONVERSATION, variation:"OOZE_THOUGHT"},
+    { x: 7, y: 20, type: PLACEMENT_TYPE_LASER_THOUGHT, variation:"LASER_THOUGHT"},
+    { x: 7, y: 21, type: PLACEMENT_TYPE_LASER_THOUGHT, variation:"LASER_THOUGHT"},
+    { x: 7, y: 22, type: PLACEMENT_TYPE_LASER_THOUGHT, variation:"LASER_THOUGHT"},
+    { x: 1, y: 13, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT"},
+    { x: 2, y: 13, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT"},
+    { x: 3, y: 13, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT"},
+    { x: 4, y: 13, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT"},
     // { x: 18, y: 28, type: PLACEMENT_TYPE_CONVERSATION, variation:"TOILET_THOUGHT"},
+
+    // Rigid Body Ooze 
+    { x: 1, y: 12, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT", variation: "RIGID_BODY"},
+    { x: 2, y: 12, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT", variation: "RIGID_BODY"},
+    { x: 3, y: 12, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT", variation: "RIGID_BODY"},
+    { x: 4, y: 12, type: PLACEMENT_TYPE_OOZE_THOUGHT, variation:"OOZE_THOUGHT", variation: "RIGID_BODY"},
 
 
 

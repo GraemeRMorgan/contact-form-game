@@ -1,6 +1,6 @@
 import styles from "./GameStart.module.css";
 import { useState, useEffect } from "react";
-import { useKeyPress } from "@/app/hooks/useKeyPress";
+import { useKeyPress}  from "../../../app/hooks/useKeyPress.js";
 
 const Conversation = ({ level }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -9,6 +9,13 @@ const Conversation = ({ level }) => {
     level.conversation = null;
     level.setConversation(null)
   };
+
+  useKeyPress("Enter", () => {
+    console.log(level)
+    handleClick();
+  })
+
+  
 
   return (
     <>

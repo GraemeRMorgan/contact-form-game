@@ -39,11 +39,13 @@ export const TILES = {
 
 
   // Conversation
-  AJ_CONVO_1: "1x9",
-  GUARD_CONVO: "1x9",
-  TOILET_THOUGHT: "1x9",
-  LASER_THOUGHT: "1x9",
-  OOZE_THOUGHT: "1x9",
+  AJ_CONVO_1: "1x2",
+  GUARD_CONVO: "1x2",
+  TOILET_THOUGHT: "1x2",
+
+  // Removable Thoughts
+  LASER_THOUGHT: "1x2",
+  OOZE_THOUGHT: "1x2",
 
   // Lasers
   LASER_WALL_ON: "16x1",

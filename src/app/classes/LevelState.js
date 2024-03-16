@@ -121,7 +121,6 @@ export class LevelState {
     return this.laserValue;
   }
   setConversation(conversationType){
-    console.log("triggered")
     this.conversation = conversationType
   }
 

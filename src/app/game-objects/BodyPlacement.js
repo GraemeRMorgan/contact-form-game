@@ -120,7 +120,6 @@ import { Placement } from "./Placement";
 
      const conversationStart = collision.withConversation();
      if(conversationStart) {
-      console.log("called")
       this.level.setConversation(conversationStart.variation);
 
      }

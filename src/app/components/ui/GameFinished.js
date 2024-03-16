@@ -1,6 +1,7 @@
 import styles from "./GameStart.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useKeyPress } from "@/app/hooks/useKeyPress";
 import soundsManager, { SFX } from "../../classes/Sounds";
 
 
@@ -12,6 +13,8 @@ const GameFinished = ({ level }) => {
   const handleButtonClick = () => {
     soundsManager.playSfx(SFX.CLICK);
   };
+
+  
 
   return (
     <div className={isVisible ? styles.wrapper : styles.hide}>
