@@ -29,9 +29,13 @@ import { Howl } from "howler";
  };
  
  export class Sounds {
-   constructor() {
+   constructor(type) {
      this.howls = {};
-     this.sfxVolume = 0.5;
+     this.sfxVolume = 0.2;
+     this.footVolume = 0.1;
+     this.musicVolume = 0.3;
+     this.type = type;
+
    }
  
    init() {

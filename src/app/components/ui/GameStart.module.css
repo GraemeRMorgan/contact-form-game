@@ -20,7 +20,7 @@
   color: hsla(0, 100%, 100%, 1);
   gap: 24px;
   padding: 48px;
-  background-color: #c4a06e;
+  background-color: hsla(231, 36%, 47%, 1);
   border: 2px solid hsla(210, 2%, 32%, 1);
   z-index: 100;
 }
@@ -56,6 +56,15 @@
 
 @media (max-width: 700px) {
   .wrapper {
+    top: 15%; /* Adjust top position for mobile */
+    left: 10%; /* Adjust left position for mobile */
+    transform: translate(0, 0); /* Remove translation for mobile */
+    padding: 24px; /* Increase padding for mobile */
+    width: 80%; /* Set a specific width for mobile */
+    height: auto; /* Adjust height for mobile */
+  }
+
+  .conversationWrapper{
     top: 15%; /* Adjust top position for mobile */
     left: 10%; /* Adjust left position for mobile */
     transform: translate(0, 0); /* Remove translation for mobile */

@@ -18,8 +18,8 @@ const GameStart = ({ level }) => {
       <p>
         In an attempt to make my contact details just as hard to find as the
         average large corporation. I have crafted this game. Finish the level
-        and you will have my contact details. If you&apos;re a bot, this might
-        make it more challenging to scrape this site for my details.
+        and you will have my contact details. There is music in this game, it can be muted
+        in the menu in the upper right.
       </p>
       <p>
         Navigate with the{" "}
