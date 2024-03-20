@@ -155,6 +155,8 @@ export const TILES = {
   CONSOLE_WALL_GREEN: "17x0",
   SHELF_LEFT: "9x16",
   TABLE_LEFT: "14x16",
+  CHEETOS_DRESSING: "3x3",
+
 
 
 

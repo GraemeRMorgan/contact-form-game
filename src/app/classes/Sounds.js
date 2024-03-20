@@ -50,6 +50,8 @@ import { Howl } from "howler";
    playSfx(key) {
      // Reference our sound in memory
      const howl = this.howls[key];
+
+     
  
      // Play it with current volume setting
      howl.volume(this.sfxVolume);

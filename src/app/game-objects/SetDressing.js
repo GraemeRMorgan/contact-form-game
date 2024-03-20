@@ -11,13 +11,11 @@ export class SetDressing extends Placement {
   }
 
   isSolidForBody() {
-    if(this.variation === SET_DRESSING_TYPES.TOILET1){
+    if (this.variation === SET_DRESSING_TYPES.TOILET1) {
       return false;
     }
     return true;
   }
-
-
 
   renderComponent() {
     let dressingCoord = this.variation;
@@ -139,6 +137,9 @@ export class SetDressing extends Placement {
         break;
       case SET_DRESSING_TYPES.SCREEN_TEXT1:
         dressingCoord = TILES.SCREEN_TEXT1;
+        break;
+      case SET_DRESSING_TYPES.CHEETOS_DRESSING:
+        dressingCoord = TILES.CHEETOS_DRESSING;
         break;
       default:
         dressingCoord = TILES.GOAL_ENABLED;

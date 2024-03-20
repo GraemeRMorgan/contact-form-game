@@ -438,6 +438,9 @@ const level = {
      */
     { x: 1, y: 19, type: PLACEMENT_TYPE_SETDRESSING, variation: "COMPUTER_DESK" },
 
+    /**
+     */
+
 
 
 
@@ -503,6 +506,8 @@ const level = {
     { x: 16, y: 28, type: PLACEMENT_TYPE_SETDRESSING, variation: "COUCH" },
     { x: 16, y: 29, type: PLACEMENT_TYPE_COLLIDER},
     { x: 20, y: 28, type: PLACEMENT_TYPE_SETDRESSING, variation: "TV" },
+    { x: 17 , y: 29, type: PLACEMENT_TYPE_SETDRESSING, variation: "CHEETOS_DRESSING" },
+
 
     /**
      * BATHROOM
@@ -534,7 +539,7 @@ const level = {
      */
 
     // Hero
-    { x: 17, y: 22, type: PLACEMENT_TYPE_HERO },
+    { x: 6, y: 7, type: PLACEMENT_TYPE_HERO },
     // AJ
     { x: 1, y: 27, type: PLACEMENT_TYPE_AJ},
     // Goal
@@ -564,7 +569,7 @@ const level = {
     // Key Placement
     { x: 3, y: 3, type: PLACEMENT_TYPE_KEY, color: "TREASURE" },
     { x: 14, y: 18, type: PLACEMENT_TYPE_KEY, color: "ORANGE" },
-    { x: 17 , y: 29, type: PLACEMENT_TYPE_KEY, color: "CHEETOS" },
+    // { x: 17 , y: 29, type: PLACEMENT_TYPE_KEY, color: "CHEETOS" },
     { x: 11, y: 30, type: PLACEMENT_TYPE_KEY, color: "WHITE" },
     { x: 2, y: 21, type: PLACEMENT_TYPE_KEY, color: "BLUE" },
 
@@ -574,7 +579,7 @@ const level = {
     // Lock Placement
     { x: 18, y: 4, type: PLACEMENT_TYPE_LOCK, color: "ORANGE" },
     { x: 9, y: 19, type: PLACEMENT_TYPE_LOCK, color: "WHITE" },
-    { x: 3, y: 27, type: PLACEMENT_TYPE_LOCK, color: "CHEETOS" },
+    // { x: 3, y: 27, type: PLACEMENT_TYPE_LOCK, color: "CHEETOS" },
 
     // Mind Control
     { x: 12, y: 19, type: PLACEMENT_TYPE_LOCK, color: "BLUE" },
