@@ -23,7 +23,7 @@ const GameFinished = ({ level }) => {
         Great work at finishing the game! I am located on Vancouver Island in Western Canada (PST).
       </p>
       <p>I look forward to hearing from you.</p>
-      <h2>morgan.graeme@gmail.com</h2>
+      <h3>morgan.graeme@gmail.com</h3>
      
       <motion.button
         layout
