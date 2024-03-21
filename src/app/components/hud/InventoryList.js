@@ -30,6 +30,10 @@ const showInventory = [
     key: "KEY_CHEETOS",
     tile: TILES.CHEETOS_KEY,
   },
+  {
+    key: "KEY_TREASURE",
+    tile: TILES.TREASURE_KEY,
+  },
 ];
 
 export default function InventoryList({ level }) {

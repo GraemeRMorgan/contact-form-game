@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import { useKeyPress}  from "../../../app/hooks/useKeyPress.js";
 import { motion } from "framer-motion";
 import soundsManager, { SFX } from "../../classes/Sounds";
+import Image from "next/image";
+import aj from "../../../../public/characters/aj.png"
+import hero from "../../../../public/characters/hero.png"
+import guard from "../../../../public/characters/guard.png"
 
 
 const Conversation = ({ level }) => {
