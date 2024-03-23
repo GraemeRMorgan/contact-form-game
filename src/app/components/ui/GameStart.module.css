@@ -10,6 +10,7 @@
   background-color: hsla(231, 36%, 47%, 1);
   border: 2px solid hsla(210, 2%, 32%, 1);
   z-index: 100;
+  border-radius: 12px;
 }
 
 .conversationWrapper {
@@ -19,10 +20,41 @@
   transform: translate(-50%, -50%);
   color: hsla(0, 100%, 100%, 1);
   gap: 24px;
-  padding: 48px;
+  padding: 24px;
   background-color: hsla(231, 36%, 47%, 1);
   border: 2px solid hsla(210, 2%, 32%, 1);
   z-index: 100;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.conversationGrid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.characterIcon{
+  /* grid-column: 1/2; */
+  align-items: center;
+  justify-self: center;
+}
+
+.dialogue {
+  grid-column: 2/4;
+  align-self: center;
+  padding: 12px 24px;
+  border-radius: 18px;
+  background-color: hsla(231, 45%, 24%, 1);
+}
+
+.dialogueButton{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
 }
 
 
@@ -36,7 +68,7 @@
   margin: 0px;
   cursor: pointer;
   border: var(--border-med) var(--color-gray-1000);
-  /* margin-right: 16px;  */
+  margin-right: 16px; 
 }
 
 .goBack {
@@ -66,10 +98,10 @@
 
   .conversationWrapper{
     top: 15%; /* Adjust top position for mobile */
-    left: 10%; /* Adjust left position for mobile */
+    left: 5%; /* Adjust left position for mobile */
     transform: translate(0, 0); /* Remove translation for mobile */
     padding: 24px; /* Increase padding for mobile */
-    width: 80%; /* Set a specific width for mobile */
+    width: 90%; /* Set a specific width for mobile */
     height: auto; /* Adjust height for mobile */
   }
 }

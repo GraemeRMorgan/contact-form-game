@@ -540,6 +540,8 @@ const level = {
 
     // Hero
     { x: 7, y: 7, type: PLACEMENT_TYPE_HERO },
+    // { x: 18, y: 22, type: PLACEMENT_TYPE_HERO },
+
     // AJ
     { x: 1, y: 27, type: PLACEMENT_TYPE_AJ},
     // Goal
