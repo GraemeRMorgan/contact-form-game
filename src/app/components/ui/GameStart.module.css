@@ -70,6 +70,10 @@
   border: var(--border-med) var(--color-gray-1000);
   margin-right: 16px; 
 }
+.buttonLayout{
+  display: flex;
+  flex-direction: row;
+}
 
 .goBack {
   margin-left: 16px;

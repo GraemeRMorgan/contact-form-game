@@ -24,7 +24,7 @@ const GameFinished = ({ level }) => {
       </p>
       <p>I look forward to hearing from you.</p>
       <h3>morgan.graeme@gmail.com</h3>
-     
+     <div className={styles.buttonLayout}>
       <motion.button
         layout
         className={styles.button}
@@ -77,6 +77,7 @@ const GameFinished = ({ level }) => {
       >
         Go Back?
       </motion.button>
+      </div>
     </div>
   );
 };
