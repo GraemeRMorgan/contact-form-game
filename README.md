@@ -1,6 +1,7 @@
 # Contact Information Madness
 ![Screenshot from a pixel art game](/public/images/contact-madness.jpg)
 
+You can check out the application here: [Contact Information Madness](https://minigame.graememorgan.com/)
 # Structure
 This is the primary structure of the application. I have not included every class and utility file. Most of the classes have to do with different placement objects. 
 
