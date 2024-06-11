@@ -1,5 +1,4 @@
-import { LEVEL_THEMES, PLACEMENT_TYPE_GOAL, PLACEMENT_TYPE_HERO, PLACEMENT_TYPE_WALL, PLACEMENT_TYPE_FLOUR } from "../helpers/consts";
-import { TILES } from "../helpers/tiles";
+import { PLACEMENT_TYPE_HERO } from "../helpers/consts";
 import { placementFactory } from "./PlacementFactory"
 import { GameLoop } from "./GameLoop";
 import { DirectionControls } from "./DirectionControls";

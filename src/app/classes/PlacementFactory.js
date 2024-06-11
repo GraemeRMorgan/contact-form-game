@@ -1,3 +1,7 @@
+/**
+ * This file controls the placement for all sprites in the game. 
+ * Anytime a new placement type is added in the consts or tiles, it must be added here.
+ */
 
 const {
     PLACEMENT_TYPE_HERO,

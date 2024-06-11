@@ -6,6 +6,7 @@ import { spriteSheetImageAtom } from "@/app/atoms/spriteSheetImageAtom";
 
 const Sprite = ({ frameCoord, size = 16 }) => {
 
+  // The sprite sheet needs to be visible throughout the application
   const spriteSheetImage = useRecoilValue(spriteSheetImageAtom);
   const canvasRef = useRef();
   useEffect(() => {
@@ -21,20 +22,21 @@ const Sprite = ({ frameCoord, size = 16 }) => {
     const tileSheetY = Number(frameCoord.split("x")[1]);
 
     ctx.drawImage(
-      spriteSheetImage, // Image to pull from
-      tileSheetX * CELL_SIZE, // Left X corner of frame
-      tileSheetY * CELL_SIZE, // Top Y corner of frame
-      size, //How much to crop from the sprite sheet (X)
-      size, //How much to crop from the sprite sheet (Y)
+      spriteSheetImage, 
+      tileSheetX * CELL_SIZE, 
+      tileSheetY * CELL_SIZE, 
+      size, // x crop from spritesheet
+      size, //y crop from spritesheet
       0, //Where to place this on canvas tag X (0)
       0, //Where to place this on canvas tag Y (0)
-      size, //How large to scale it (X)
-      size //How large to scale it (Y)
+      size, // x scale
+      size // y scale
     );
   }, [spriteSheetImage, frameCoord, size]);
 
   return <canvas width={size} height={size} ref={canvasRef} />;
 }
 
+// Exporting as a memoized element, so that it only rerenders on a change in state. 
 const MemoizedSprite = React.memo(Sprite);
 export default MemoizedSprite;

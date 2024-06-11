@@ -1,5 +1,4 @@
 import styles from "./TopHud.module.css";
-import FlourCount from "./FlourCount";
 import InventoryList from "./InventoryList";
 
 

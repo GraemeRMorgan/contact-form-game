@@ -1,3 +1,6 @@
+/**
+ * This component runs on initial start of the game.
+ */
 import { useState } from "react";
 import styles from "./GameStart.module.css";
 import { motion } from "framer-motion";

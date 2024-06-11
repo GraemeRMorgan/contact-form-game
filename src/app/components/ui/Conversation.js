@@ -87,7 +87,6 @@ const Conversation = ({ level }) => {
                 width={75}
                 height={75}
                 quality={100}
-                loading="lazy"
               />
             </div>
             <div className={styles.dialogue}>

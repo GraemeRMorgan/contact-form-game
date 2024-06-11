@@ -1,3 +1,7 @@
+/**
+ * This file runs the main game loop and ensures that the game plays at the 
+ * same frame rate on all machines.
+ */
 import soundsManager, { SFX } from "../classes/Sounds";
 
 

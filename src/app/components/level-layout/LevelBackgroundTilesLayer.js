@@ -1,3 +1,6 @@
+/**
+ * This file sets up the basics of the level. Exterior walls and floor.
+ */
 import { THEME_TILES_MAP } from "@/app/helpers/consts";
 import MapCell from "./MapCell"
 

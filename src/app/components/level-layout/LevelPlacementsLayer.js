@@ -1,4 +1,9 @@
-// import styles from './LevelPlacementsLayer.module.css';
+/**
+ * This places every sprite in the level except elements in LevelBackgroundTilesLayer. This file component
+ * should have been called LevelTilesLayer.
+ * 
+ * Comment out the line `<LevelPlacementsLayer level={level} />` in RenderLevel to see what it's doing.
+ */
 
 const LevelPlacementsLayer = ({ level }) => {
   return level.placements.filter(placement => {

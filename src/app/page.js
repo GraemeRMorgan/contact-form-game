@@ -1,15 +1,17 @@
+/**
+ * Entrypoint 
+ * Client Side Rendering for preformance.
+ * 
+ */
+
 "use client";
-import styles from "./page.module.css";
 import App from "./App";
 import { RecoilRoot } from "recoil";
-import GameStart from "./components/ui/GameStart";
-// import "../app/components/ui/ui_globals.css";
 
 const Home = () => {
   return (
+    // App is wrapped in a Recoil to share state throughout children. 
     <>
-    {/* <GameStart /> */}
-
       <RecoilRoot>
         <App />
       </RecoilRoot>
