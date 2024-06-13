@@ -36,7 +36,7 @@ graph TD;
 # About
 This is a simple game to create an interactive way to share contact details. This is really a joke about how complicated it is to find contact information on most corporate websites. 
 
-If you would like to learn more about game development for the browser, I would suggest checking out [Drew Conley's Site](https://www.coopmode.dev/) This was incredibly helpful and much of the code in this project is based on his [Ciabatta's Revenge](https://www.coopmode.dev/series/ciabattas-revenge/) tutorial series.
+If you would like to learn more about game development for the browser, I would suggest checking out [Drew Conley's Site](https://www.coopmode.dev/) 
 
 
 
